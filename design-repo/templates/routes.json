@@ -1,0 +1,276 @@
+{
+ "note": "Every route the clone serves (.recon/routes.txt, 39 lines), mapped to exactly one template. verify_all.py re-checks 1:1 coverage and, when the source tree is present, that each evidence file exists and that the route list equals .recon/routes.txt.",
+ "source": ".recon/routes.txt:1-39",
+ "routes": [
+  {
+   "path": "/",
+   "template": "home",
+   "locale": "en",
+   "evidence": ".recon/pages/index.html"
+  },
+  {
+   "path": "/fr/",
+   "template": "home",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr.html"
+  },
+  {
+   "path": "/works/arte/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__arte.html",
+   "slug": "arte"
+  },
+  {
+   "path": "/fr/works/arte/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__arte.html",
+   "slug": "arte"
+  },
+  {
+   "path": "/works/athletic-brewing-company/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__athletic-brewing-company.html",
+   "slug": "athletic-brewing-company"
+  },
+  {
+   "path": "/fr/works/athletic-brewing-company/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__athletic-brewing-company.html",
+   "slug": "athletic-brewing-company"
+  },
+  {
+   "path": "/works/billy/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__billy.html",
+   "slug": "billy"
+  },
+  {
+   "path": "/fr/works/billy/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__billy.html",
+   "slug": "billy"
+  },
+  {
+   "path": "/works/brico-depot/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__brico-depot.html",
+   "slug": "brico-depot"
+  },
+  {
+   "path": "/fr/works/brico-depot/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__brico-depot.html",
+   "slug": "brico-depot"
+  },
+  {
+   "path": "/works/fnac-darty/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__fnac-darty.html",
+   "slug": "fnac-darty"
+  },
+  {
+   "path": "/fr/works/fnac-darty/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__fnac-darty.html",
+   "slug": "fnac-darty"
+  },
+  {
+   "path": "/works/graille-sur-le-rail/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__graille-sur-le-rail.html",
+   "slug": "graille-sur-le-rail"
+  },
+  {
+   "path": "/fr/works/graille-sur-le-rail/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__graille-sur-le-rail.html",
+   "slug": "graille-sur-le-rail"
+  },
+  {
+   "path": "/works/hoppy-road/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__hoppy-road.html",
+   "slug": "hoppy-road"
+  },
+  {
+   "path": "/fr/works/hoppy-road/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__hoppy-road.html",
+   "slug": "hoppy-road"
+  },
+  {
+   "path": "/works/instax/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__instax.html",
+   "slug": "instax"
+  },
+  {
+   "path": "/fr/works/instax/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__instax.html",
+   "slug": "instax"
+  },
+  {
+   "path": "/works/la-canute/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__la-canute.html",
+   "slug": "la-canute"
+  },
+  {
+   "path": "/fr/works/la-canute/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__la-canute.html",
+   "slug": "la-canute"
+  },
+  {
+   "path": "/works/le-monde-loreal/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__le-monde-loreal.html",
+   "slug": "le-monde-loreal"
+  },
+  {
+   "path": "/fr/works/le-monde-loreal/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__le-monde-loreal.html",
+   "slug": "le-monde-loreal"
+  },
+  {
+   "path": "/works/mc-cain/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__mc-cain.html",
+   "slug": "mc-cain"
+  },
+  {
+   "path": "/fr/works/mc-cain/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__mc-cain.html",
+   "slug": "mc-cain"
+  },
+  {
+   "path": "/works/mijote/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__mijote.html",
+   "slug": "mijote"
+  },
+  {
+   "path": "/fr/works/mijote/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__mijote.html",
+   "slug": "mijote"
+  },
+  {
+   "path": "/works/msa/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__msa.html",
+   "slug": "msa"
+  },
+  {
+   "path": "/fr/works/msa/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__msa.html",
+   "slug": "msa"
+  },
+  {
+   "path": "/works/nicolas-feuillatte/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__nicolas-feuillatte.html",
+   "slug": "nicolas-feuillatte"
+  },
+  {
+   "path": "/fr/works/nicolas-feuillatte/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__nicolas-feuillatte.html",
+   "slug": "nicolas-feuillatte"
+  },
+  {
+   "path": "/works/series-mania/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__series-mania.html",
+   "slug": "series-mania"
+  },
+  {
+   "path": "/fr/works/series-mania/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__series-mania.html",
+   "slug": "series-mania"
+  },
+  {
+   "path": "/works/vianney/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__vianney.html",
+   "slug": "vianney"
+  },
+  {
+   "path": "/fr/works/vianney/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__vianney.html",
+   "slug": "vianney"
+  },
+  {
+   "path": "/works/youtube-ads/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__youtube-ads.html",
+   "slug": "youtube-ads"
+  },
+  {
+   "path": "/fr/works/youtube-ads/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__youtube-ads.html",
+   "slug": "youtube-ads"
+  },
+  {
+   "path": "/works/youtube/",
+   "template": "work-detail",
+   "locale": "en",
+   "evidence": ".recon/pages/works__youtube.html",
+   "slug": "youtube"
+  },
+  {
+   "path": "/fr/works/youtube/",
+   "template": "work-detail",
+   "locale": "fr",
+   "evidence": ".recon/pages/fr__works__youtube.html",
+   "slug": "youtube"
+  },
+  {
+   "path": "/404/",
+   "template": "not-found",
+   "locale": "en",
+   "evidence": ".recon/pages/404.html"
+  }
+ ]
+}

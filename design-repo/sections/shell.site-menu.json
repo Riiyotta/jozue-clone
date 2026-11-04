@@ -1,0 +1,80 @@
+{
+ "id": "shell.site-menu",
+ "title": "Site menu overlay",
+ "version": "1.0.0",
+ "purpose": "Fixed menu toggle plus a full-screen dark panel with anchor links and a language switch.",
+ "semantic": {
+  "id": "shell.site-menu",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:nav[id=\"js-menu\" class=\"menu menu--site\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "nav",
+  "lines": "128",
+  "needle": "id=\"js-menu\" class=\"menu menu--site\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Menu.jsx:3",
+   "needle": "menu--site"
+  },
+  {
+   "cite": "src/components/MenuToggle.jsx:3",
+   "needle": "js-menu-button"
+  }
+ ],
+ "retrievalEligible": false,
+ "retrievalReason": "Overlay menu panel (aria-hidden + inert until opened, fixed position). Runtime navigation UI, not a retrievable content section.",
+ "constraints": {
+  "onePerPage": true
+ },
+ "variants": [],
+ "content": {
+  "links": {
+   "kind": "linkList",
+   "minItems": 1,
+   "maxItems": 3,
+   "maxWords": 2,
+   "required": true
+  },
+  "languageLinks": {
+   "kind": "linkList",
+   "minItems": 1,
+   "maxItems": 2,
+   "maxWords": 1,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "panel-slide",
+   "underline-grow"
+  ],
+  "default": "panel-slide"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.ink"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "mobile": "Toggle sits right 24px instead of 38px."
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [],
+ "measured": {
+  "inFlowAt1440": false,
+  "note": "fixed/overlay or display:none at 1440; takes no page height"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:274",
+   "needle": "### 4.7 Menu open/close"
+  }
+ ]
+}

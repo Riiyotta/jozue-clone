@@ -1,0 +1,32 @@
+{
+ "id": "component.partner-card",
+ "title": "Partner card",
+ "purpose": "Logo (220x220) plus role line, the whole card links out.",
+ "props": {
+  "name": "text",
+  "role": "text",
+  "href": "url",
+  "logo": "media-image(partner.logo)"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:565",
+   "needle": "class=\"js-slider-item homepage__partner\""
+  },
+  {
+   "cite": "src/components/Partners.jsx:20",
+   "needle": "homepage__partner-job"
+  }
+ ],
+ "motion": [
+  "reveal-fade",
+  "underline-grow"
+ ],
+ "tokens": [
+  "partner.logo-size"
+ ],
+ "composes": [
+  "primitive.media-image",
+  "primitive.underline-link"
+ ]
+}

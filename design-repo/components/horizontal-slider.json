@@ -1,0 +1,24 @@
+{
+ "id": "component.horizontal-slider",
+ "title": "Horizontal slider",
+ "purpose": "Drag/arrow slider with dots, used by hero description (mobile), awards and partners.",
+ "props": {
+  "items": "cards",
+  "perView": "1 on mobile"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:425",
+   "needle": "class=\"js-slider-awards homepage__awards-list-scroll\""
+  }
+ ],
+ "motion": [
+  "slider-drag"
+ ],
+ "tokens": [
+  "elevation.slider-edge"
+ ],
+ "composes": [
+  "primitive.slider-arrow"
+ ]
+}

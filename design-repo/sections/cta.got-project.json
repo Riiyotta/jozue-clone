@@ -1,0 +1,80 @@
+{
+ "id": "cta.got-project",
+ "title": "Got-a-project prompt",
+ "version": "1.0.0",
+ "purpose": "Small uppercase prompt that scrolls (home) or navigates (work pages) to the contact block.",
+ "semantic": {
+  "id": "cta.got-project",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:section[class=\"got-project\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "406",
+  "needle": "class=\"got-project\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/WorksList.jsx:488",
+   "needle": "got-project"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "target": {
+   "kind": "href",
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "anchor-scroll",
+   "none"
+  ],
+  "default": "anchor-scroll"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.cream",
+   "surface.accent"
+  ],
+  "text": [
+   "text.primary",
+   "text.on-dark"
+  ],
+  "accent": true
+ },
+ "responsive": {
+  "1440": "241px (padding 121/86)",
+  "390": "123px"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 241,
+   "max": 241,
+   "instances": 38,
+   "routes": 38
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:173",
+   "needle": "| `.got-project` | [0, 5311.1, 1440, 241]"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "id": "primitive.video-frame",
+ "title": "Hosted video frame",
+ "purpose": "Self-hosted mp4 in a lazyframe wrapper with a play control (no third-party embeds).",
+ "props": {
+  "assetRole": "closed enum",
+  "ref": "asset ref",
+  "poster": "asset ref"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/works__youtube.html:96",
+   "needle": "lazyframe--hosted"
+  }
+ ]
+}

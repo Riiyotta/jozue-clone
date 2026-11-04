@@ -1,0 +1,16 @@
+{
+ "category": "elevation",
+ "tokens": {
+  "elevation.slider-edge": {
+   "$type": "shadow",
+   "$value": "inset 9px 0 5px -12px #2f2f2f",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "box-shadow:inset 9px 0 5px -12px #2f2f2f"
+    }
+   ],
+   "note": "Only shadow in the CSS: an inner edge on horizontal sliders. The site is otherwise flat."
+  }
+ }
+}

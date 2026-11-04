@@ -1,0 +1,296 @@
+{
+ "version": "1.0.0",
+ "availabilityEnum": [
+  "reference-only",
+  "generation-safe",
+  "blocked-for-generation"
+ ],
+ "generationPolicyEnum": [
+  "may-generate-new",
+  "must-reuse-exact",
+  "must-not-fabricate",
+  "must-not-reuse",
+  "user-supplied-only"
+ ],
+ "note": "Availability is ALSO pinned in code (PINNED_AVAILABILITY in extraction/verify_all.py and schema/semantic_validate.py); editing this file alone cannot loosen it. No source wordmark/logo is ever must-reuse-exact in generated mode.",
+ "roles": {
+  "brand.wordmark": {
+   "availability": "blocked-for-generation",
+   "description": "Source wordmark SVG (full logo) used in let's talk / contact backgrounds.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:85",
+     "needle": "jozue-logo-full.DpMZCk-F.svg"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "licensing": "Real, live freelance portfolio. Never reproduce in generated output; reference mode may cite it only as evidence of the source."
+  },
+  "brand.monogram": {
+   "availability": "blocked-for-generation",
+   "description": "Source small 'J' logo SVG in the about band.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:556",
+     "needle": "jozue-logo-small.DJpN4TMc.svg"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "licensing": "Real, live freelance portfolio. Never reproduce in generated output; reference mode may cite it only as evidence of the source."
+  },
+  "brand.project-mark": {
+   "availability": "blocked-for-generation",
+   "description": "Source logo variant used on work pages.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": ".recon/pages/works__arte.html:27",
+     "needle": "jozue-logo-project"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "licensing": "Real, live freelance portfolio. Never reproduce in generated output; reference mode may cite it only as evidence of the source."
+  },
+  "brand.signature-trace": {
+   "availability": "blocked-for-generation",
+   "description": "Handwritten 'J' and signature stroke data (script#trace-j / #trace-signature JSON) that drives every drawing animation. It is the owner's handwriting.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:123",
+     "needle": "id=\"trace-j\""
+    },
+    {
+     "cite": ".recon/pages/works__arte.html:70",
+     "needle": "id=\"trace-signature\""
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.brand-mark"
+   ],
+   "licensing": "Real, live freelance portfolio. Never reproduce in generated output; reference mode may cite it only as evidence of the source."
+  },
+  "work.card-media": {
+   "availability": "reference-only",
+   "description": "Client work thumbnails on work cards (lazy webp, 1200 wide).",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-fabricate",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:262",
+     "needle": "class=\"js-home-work-media homepage__work--media\""
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.project-visual"
+   ],
+   "licensing": "Client/commissioned imagery; copyright of the owner and clients."
+  },
+  "work.hero-media": {
+   "availability": "reference-only",
+   "description": "Large project hero image (data-hero) used by the shared-element transition and the work page hero.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-fabricate",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:255",
+     "needle": "data-hero=\"/_astro/billy-hero-1"
+    },
+    {
+     "cite": ".recon/pages/works__arte.html:95",
+     "needle": "class=\"project-hero-container project-hero-container--full\""
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.project-visual"
+   ],
+   "licensing": "Client/commissioned imagery."
+  },
+  "work.gallery-media": {
+   "availability": "reference-only",
+   "description": "Stills, rows, pairs, triangles, large images, carousels, cards, app screens and device mockups inside case studies.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-fabricate",
+   "evidence": [
+    {
+     "cite": ".recon/pages/works__arte.html:100",
+     "needle": "class=\"project-stills-container\""
+    },
+    {
+     "cite": ".recon/pages/works__arte.html:123",
+     "needle": "class=\"project-img-large\""
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.project-visual"
+   ],
+   "licensing": "Client/commissioned imagery."
+  },
+  "work.video": {
+   "availability": "reference-only",
+   "description": "Self-hosted case-study videos (mp4, preload none) and their posters.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-fabricate",
+   "evidence": [
+    {
+     "cite": ".recon/pages/works__youtube.html:96",
+     "needle": "lazyframe--hosted"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.project-video"
+   ],
+   "licensing": "Client films."
+  },
+  "partner.logo": {
+   "availability": "blocked-for-generation",
+   "description": "Logos of real partner studios and freelancers (220x220 webp).",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:567",
+     "needle": "vivan_logo"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.partner-mark"
+   ],
+   "licensing": "Third-party trademarks of real people/studios."
+  },
+  "social.share-image": {
+   "availability": "reference-only",
+   "description": "OG share image of the source home page.",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:91",
+     "needle": "share-home"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.project-visual"
+   ],
+   "licensing": "Real, live freelance portfolio. Never reproduce in generated output; reference mode may cite it only as evidence of the source."
+  },
+  "font.display-face": {
+   "availability": "reference-only",
+   "description": "Neue Haas Grotesk Display 400/700 woff2 files (commercial typeface).",
+   "referencePolicy": "must-reuse-exact",
+   "generationPolicy": "user-supplied-only",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "NHaasGroteskDSPro-55Rg"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "licensed-or-fallback.font"
+   ],
+   "licensing": "Commercial font licence held by the source; a generated page needs its own licence or uses the fallback stack."
+  },
+  "icon.ui": {
+   "availability": "generation-safe",
+   "description": "Generic UI glyphs drawn inline: slider chevrons, close-circle X, back arrow, menu bars.",
+   "referencePolicy": "may-reuse",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:171",
+     "needle": "d=\"m1 14 6.5-6.5L1 1\""
+    }
+   ]
+  },
+  "generated.brand-mark": {
+   "availability": "generation-safe",
+   "description": "A brand mark generated for, or supplied by, the new page's owner (replaces wordmark, monogram and signature trace).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "placeholder.brand-mark": {
+   "availability": "generation-safe",
+   "description": "Neutral placeholder mark (e.g. initials in the display face) until the owner supplies one.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "generated.project-visual": {
+   "availability": "generation-safe",
+   "description": "AI-generated or user-supplied project imagery for fictional or the user's own work.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "placeholder.project-video": {
+   "availability": "generation-safe",
+   "description": "User-supplied video or a neutral poster frame.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "user-supplied-only",
+   "evidence": []
+  },
+  "placeholder.partner-mark": {
+   "availability": "generation-safe",
+   "description": "Fictional collaborator monogram; never a real studio logo.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "fictional.person-avatar": {
+   "availability": "generation-safe",
+   "description": "Avatar of a fictional person; never a real person's likeness.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "placeholder.award-label": {
+   "availability": "generation-safe",
+   "description": "Placeholder recognition text/badge (marked placeholder); never a real award body, ranking or rating.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "placeholder.url": {
+   "availability": "generation-safe",
+   "description": "Links on reserved domains only (.example, .invalid, example.com/.org/.net) or in-page anchors.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "original.copy": {
+   "availability": "generation-safe",
+   "description": "Copy written for the new page; must not reuse source sentences (validator COPY rule).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "licensed-or-fallback.font": {
+   "availability": "generation-safe",
+   "description": "The fallback stack \"Helvetica Neue\", Helvetica, Arial, system-ui, sans-serif, or a display face the user licenses.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "user-supplied-only",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-family:Neue Haas Grotesk Display,Helvetica Neue"
+    }
+   ]
+  }
+ }
+}

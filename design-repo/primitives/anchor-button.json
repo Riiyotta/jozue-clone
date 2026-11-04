@@ -1,0 +1,21 @@
+{
+ "id": "primitive.anchor-button",
+ "title": "Anchor scroll button",
+ "purpose": "Button that GSAP-scrolls to an in-page anchor (#about, #works, #contact). Computes to Arial when it has no font class (source trait).",
+ "props": {
+  "label": "text",
+  "anchor": "#id"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:148",
+   "needle": "data-anchor=\"#about\" class=\"homepage__nav-link js-to-scroll\""
+  }
+ ],
+ "motion": [
+  "anchor-scroll"
+ ],
+ "tokens": [
+  "font.family.ua-button"
+ ]
+}

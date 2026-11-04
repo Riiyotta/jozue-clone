@@ -1,0 +1,104 @@
+{
+ "id": "cta.lets-talk",
+ "title": "Let's talk band",
+ "version": "1.0.0",
+ "purpose": "Conversion band: 170px title, availability line and a pill to contact, over a looping signature drawing. Dark on home, the project accent on work pages.",
+ "semantic": {
+  "id": "cta.lets-talk",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:section[<section data-nav-dark class=\"homepage__talk\" data-parallax-scene]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "411",
+  "needle": "<section data-nav-dark class=\"homepage__talk\" data-parallax-scene"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/TalkCta.jsx:4",
+   "needle": "homepage__talk"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "description": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "availability": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "link": {
+   "kind": "link",
+   "maxWords": 4,
+   "required": true
+  },
+  "backgroundMark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.wordmark",
+    "brand.signature-trace"
+   ],
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-stagger",
+   "signature-draw",
+   "scroll-parallax",
+   "roll-ink"
+  ],
+  "default": "reveal-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.ink",
+   "surface.accent"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": true
+ },
+ "responsive": {
+  "1440": "710px",
+  "390": "530px; title 67px"
+ },
+ "referenceAssetRoles": [
+  "brand.wordmark",
+  "brand.signature-trace"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 710,
+   "max": 710,
+   "instances": 38,
+   "routes": 38
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:174",
+   "needle": "| `.homepage__talk` (\"let's talk\", bg #111319)"
+  }
+ ]
+}

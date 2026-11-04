@@ -1,0 +1,125 @@
+{
+ "id": "works.selected-header",
+ "title": "Selected works header",
+ "version": "1.0.0",
+ "purpose": "Red band opening the portfolio index: the 170px 'selected works' title with a count pastille; on mobile a filter sentence with category chips.",
+ "semantic": {
+  "id": "works.selected-header",
+  "category": "INDEX"
+ },
+ "source": {
+  "id": "dom:section[id=\"works\" class=\"homepage__selected js-filter\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "189",
+  "needle": "id=\"works\" class=\"homepage__selected js-filter\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/SelectedWorks.jsx:3",
+   "needle": "homepage__selected"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "count": {
+   "kind": "integer",
+   "required": true
+  },
+  "filterSentence": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "categoriesLeft": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 8,
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "slug": {
+     "kind": "slug",
+     "required": true
+    },
+    "count": {
+     "kind": "integer",
+     "required": true
+    }
+   },
+   "required": true
+  },
+  "categoriesRight": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 8,
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "slug": {
+     "kind": "slug",
+     "required": true
+    },
+    "count": {
+     "kind": "integer",
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.brand"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "343px tall; title 170px; pastille 65.3px",
+  "390": "321px; filter sentence + chips visible; title 67px"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [],
+ "measured": {
+  "heightPx1440": {
+   "min": 342.6,
+   "max": 415.7,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:164",
+   "needle": "| `#works` (`.homepage__selected`, red)"
+  }
+ ]
+}

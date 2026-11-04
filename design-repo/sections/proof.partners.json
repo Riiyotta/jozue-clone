@@ -1,0 +1,113 @@
+{
+ "id": "proof.partners",
+ "title": "Partners",
+ "version": "1.0.0",
+ "purpose": "Collaborators: logo cards with role lines linking out; 1-up slider on mobile.",
+ "semantic": {
+  "id": "proof.partners",
+  "category": "PROOF"
+ },
+ "source": {
+  "id": "dom:section[class=\"homepage__partners js-partners-containers\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "561",
+  "needle": "class=\"homepage__partners js-partners-containers\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Partners.jsx:4",
+   "needle": "homepage__partners"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "partners": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 8,
+   "fields": {
+    "name": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "role": {
+     "kind": "text",
+     "maxWords": 5,
+     "required": true
+    },
+    "href": {
+     "kind": "href",
+     "required": true
+    },
+    "logo": {
+     "kind": "media",
+     "assetRoles": [
+      "partner.logo"
+     ],
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-stagger",
+   "reveal-fade",
+   "slider-drag",
+   "underline-grow"
+  ],
+  "default": "reveal-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.cream"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "530px",
+  "390": "530px slider"
+ },
+ "referenceAssetRoles": [
+  "partner.logo"
+ ],
+ "generatedAssetRoles": [
+  "placeholder.partner-mark",
+  "fictional.person-avatar",
+  "placeholder.url",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 530,
+   "max": 530,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:177",
+   "needle": "| `.homepage__partners` (bg #f7f2e7)"
+  }
+ ]
+}

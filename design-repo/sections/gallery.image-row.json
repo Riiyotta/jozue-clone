@@ -1,0 +1,99 @@
+{
+ "id": "gallery.image-row",
+ "title": "Image row",
+ "version": "1.0.0",
+ "purpose": "Row of three (or two, 'duo') portrait images, optionally titled.",
+ "semantic": {
+  "id": "gallery.image-row",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-3-img js-project-gallery project-3-img--duo\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "116",
+  "needle": "class=\"project-3-img js-project-gallery project-3-img--duo\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentArte.jsx:39",
+   "needle": "project-3-img"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [
+  "trio",
+  "duo",
+  "titled"
+ ],
+ "content": {
+  "variant": {
+   "kind": "enum",
+   "values": [
+    "trio",
+    "duo",
+    "titled"
+   ],
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "media": {
+   "kind": "mediaList",
+   "minItems": 2,
+   "maxItems": 3,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "lightbox"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "541px tall"
+ },
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 541,
+   "max": 541,
+   "instances": 32,
+   "routes": 20
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:401",
+   "needle": "| Duo `.project-3-img--duo` | [170, 2955.3, 1100, 541]"
+  }
+ ]
+}

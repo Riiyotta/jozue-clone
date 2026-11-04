@@ -1,0 +1,20 @@
+{
+ "id": "primitive.filter-chip",
+ "title": "Filter chip",
+ "purpose": "Category toggle button with a count pastille; aria-pressed when active.",
+ "props": {
+  "label": "text<=3 words",
+  "category": "slug",
+  "count": "integer"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:196",
+   "needle": "class=\"js-work-category button-selected\" data-category=\"graphic-design\""
+  }
+ ],
+ "tokens": [
+  "font.family.ua-button",
+  "font.size.filter"
+ ]
+}

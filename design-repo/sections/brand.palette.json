@@ -1,0 +1,84 @@
+{
+ "id": "brand.palette",
+ "title": "Colour palette",
+ "version": "1.0.0",
+ "purpose": "Identity detail: titled list of colour swatches with their codes.",
+ "semantic": {
+  "id": "brand.palette",
+  "category": "DETAIL"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-palette]",
+  "file": ".recon/pages/works__mijote.html",
+  "tag": "section",
+  "lines": "166",
+  "needle": "class=\"project-palette"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentMijote.jsx:130",
+   "needle": "project-palette"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": false
+  },
+  "swatches": {
+   "kind": "items",
+   "minItems": 2,
+   "maxItems": 8,
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": false
+    },
+    "tone": {
+     "kind": "accentToken",
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-stagger"
+  ],
+  "default": "reveal-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": true
+ },
+ "responsive": {},
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 725,
+   "max": 725,
+   "instances": 8,
+   "routes": 8
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

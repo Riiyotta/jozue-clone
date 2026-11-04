@@ -1,0 +1,20 @@
+{
+ "id": "primitive.display-title",
+ "title": "Display title",
+ "purpose": "170px lowercase bold title with -0.03em tracking (selected works, let's talk, project slogan).",
+ "props": {
+  "text": "text<=3 words"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:418",
+   "needle": "class=\"homepage__talk-title\" data-reveal>let&#39;s talk"
+  }
+ ],
+ "motion": [
+  "reveal-up"
+ ],
+ "tokens": [
+  "font.size.display-xxl"
+ ]
+}

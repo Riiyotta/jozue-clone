@@ -1,0 +1,426 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "work-detail",
+ "route": "/works/tidewater/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Tidewater identity | Ilse Varga",
+  "description": "Identity and photography for Tidewater, a fictional seaside ferry line."
+ },
+ "brand": {
+  "name": "Ilse Varga",
+  "domain": "ilsevarga.example"
+ },
+ "nodes": [
+  {
+   "section": "shell.page-transition",
+   "content": {},
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.site-menu",
+   "content": {
+    "links": [
+     {
+      "label": "Studio.",
+      "href": "/#about"
+     },
+     {
+      "label": "Projects.",
+      "href": "/#works"
+     },
+     {
+      "label": "Write.",
+      "href": "/#contact"
+     }
+    ],
+    "languageLinks": [
+     {
+      "label": "Deutsch.",
+      "href": "/de/works/tidewater/"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "panel-slide",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "hero.work-head",
+   "content": {
+    "backLink": {
+     "label": "All projects",
+     "href": "/#works"
+    },
+    "name": "Tidewater",
+    "categories": [
+     "Branding",
+     "Photography"
+    ],
+    "mission": "A new identity for a small ferry line that crosses the bay four times a day, built from tide tables and signal flags.",
+    "slogan": [
+     "salt",
+     "and signal"
+    ]
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.teal"
+   },
+   "motion": {
+    "pattern": "shared-element-arrival",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "media.work-hero-image",
+   "content": {
+    "variant": "full",
+    "media": {
+     "assetRole": "generated.project-visual",
+     "ref": "generated://tidewater/hero",
+     "alt": "Generated scene: a white ferry at dusk with teal signal flags"
+    }
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scroll-parallax",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "editorial.mission-text",
+   "content": {
+    "variant": "plain",
+    "text": "The line needed to feel local without looking old. Every mark is drawn from the shapes sailors already read: pennants, tide curves and the dashed line of a route."
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "gallery.stills",
+   "content": {
+    "title": "Flags and tickets",
+    "media": [
+     {
+      "assetRole": "generated.project-visual",
+      "ref": "generated://tidewater/still-1",
+      "alt": "Generated ticket stub with a pennant mark"
+     },
+     {
+      "assetRole": "generated.project-visual",
+      "ref": "generated://tidewater/still-2",
+      "alt": "Generated flag set on a mast"
+     },
+     {
+      "assetRole": "generated.project-visual",
+      "ref": "generated://tidewater/still-3",
+      "alt": "Generated timetable poster"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "gallery.image-row",
+   "content": {
+    "variant": "trio",
+    "media": [
+     {
+      "assetRole": "generated.project-visual",
+      "ref": "generated://tidewater/row-1",
+      "alt": "Generated deck signage"
+     },
+     {
+      "assetRole": "generated.project-visual",
+      "ref": "generated://tidewater/row-2",
+      "alt": "Generated crew jacket"
+     },
+     {
+      "assetRole": "generated.project-visual",
+      "ref": "generated://tidewater/row-3",
+      "alt": "Generated harbour sign"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "brand.palette",
+   "content": {
+    "title": "Colours",
+    "swatches": [
+     {
+      "label": "Deep tide",
+      "tone": "accent.teal"
+     },
+     {
+      "label": "Night crossing",
+      "tone": "accent.navy"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "editorial.quote",
+   "content": {
+    "title": "The line",
+    "quote": "Four crossings a day, every one on time.",
+    "media": {
+     "assetRole": "generated.project-visual",
+     "ref": "generated://tidewater/quote",
+     "alt": "Generated poster with the campaign line"
+    }
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "media.large-image",
+   "content": {
+    "variant": "clean",
+    "title": "At the pier",
+    "media": {
+     "assetRole": "generated.project-visual",
+     "ref": "generated://tidewater/pier",
+     "alt": "Generated photo of the ferry docked at a wooden pier"
+    }
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "cta.project-link",
+   "content": {
+    "link": {
+     "label": "Visit the timetable",
+     "href": "https://tidewater.example"
+    }
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary",
+    "accent": "accent.teal"
+   },
+   "motion": {
+    "pattern": "roll-ink",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "credits.project-credits",
+   "content": {
+    "title": "Credits",
+    "blocks": [
+     {
+      "title": "Role",
+      "lines": [
+       "Identity",
+       "Photography"
+      ]
+     },
+     {
+      "title": "Team",
+      "lines": [
+       "Ilse Varga",
+       "Rune Albers, lighting"
+      ]
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.teal"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "index.more-works",
+   "content": {
+    "title": "Other projects",
+    "cards": [
+     {
+      "title": "Quiet Orchard",
+      "href": "/works/quiet-orchard/",
+      "categories": [
+       "Packaging",
+       "Illustration"
+      ],
+      "accent": "accent.ash",
+      "slogan": [
+       "picked",
+       "at",
+       "dawn"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://quiet-orchard/card",
+       "alt": "Quiet Orchard: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://quiet-orchard/hero",
+       "alt": "Quiet Orchard: generated hero visual"
+      }
+     },
+     {
+      "title": "North Platform",
+      "href": "/works/north-platform/",
+      "categories": [
+       "Websites",
+       "Product design"
+      ],
+      "accent": "accent.navy",
+      "slogan": [
+       "one",
+       "tap",
+       "home"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://north-platform/card",
+       "alt": "North Platform: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://north-platform/hero",
+       "alt": "North Platform: generated hero visual"
+      }
+     },
+     {
+      "title": "Paper Lantern",
+      "href": "/works/paper-lantern/",
+      "categories": [
+       "Campaigns",
+       "Copywriting"
+      ],
+      "accent": "accent.violet",
+      "slogan": [
+       "light",
+       "it",
+       "slowly"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://paper-lantern/card",
+       "alt": "Paper Lantern: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://paper-lantern/hero",
+       "alt": "Paper Lantern: generated hero visual"
+      }
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.teal"
+   },
+   "motion": {
+    "pattern": "card-grow",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "cta.got-project",
+   "content": {
+    "label": "Have an idea?",
+    "target": "/#contact"
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.teal"
+   },
+   "motion": {
+    "pattern": "anchor-scroll",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "cta.lets-talk",
+   "content": {
+    "title": "say hello",
+    "description": "Taking on two commissions this season,",
+    "availability": "studio or on site",
+    "link": {
+     "label": "Write to the studio",
+     "href": "/#contact"
+    }
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.teal"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "id": "gallery.cards",
+ "title": "Phone screens row",
+ "version": "1.0.0",
+ "purpose": "Row of three tall mobile screens with lift parallax.",
+ "semantic": {
+  "id": "gallery.cards",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-cards-container\"]",
+  "file": ".recon/pages/works__fnac-darty.html",
+  "tag": "section",
+  "lines": "124",
+  "needle": "class=\"project-cards-container\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/JsProjectNextFnacDarty.jsx:12",
+   "needle": "project-cards-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "media": {
+   "kind": "mediaList",
+   "minItems": 2,
+   "maxItems": 4,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-parallax",
+   "lightbox"
+  ],
+  "default": "scroll-parallax"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 822,
+   "max": 822,
+   "instances": 4,
+   "routes": 4
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

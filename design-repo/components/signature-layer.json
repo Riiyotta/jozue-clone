@@ -1,0 +1,18 @@
+{
+ "id": "component.signature-layer",
+ "title": "Signature layer",
+ "purpose": "Background layer that draws/erases a handwritten mark behind a band (parallax soft).",
+ "props": {
+  "mark": "media-image(brand.signature-trace | generated.brand-mark)"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:415",
+   "needle": "class=\"logo-full-img talk-signature js-talk-signature\""
+  }
+ ],
+ "motion": [
+  "signature-draw",
+  "scroll-parallax"
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "id": "component.credit-block",
+ "title": "Credit block",
+ "purpose": "Title (Agency/Role/Production/Team) and lines of names.",
+ "props": {
+  "title": "text<=3 words",
+  "lines": "text[]"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/works__arte.html:136",
+   "needle": "class=\"project-credit-bloc project-credit-agency\""
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "id": "utility.filter-island",
+ "title": "Floating works filter",
+ "version": "1.0.0",
+ "purpose": "Fixed pill at the viewport foot while the works list is in view: two cycling word slots and a count; opens into a category filter panel.",
+ "semantic": {
+  "id": "utility.filter-island",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:div[class=\"filter-island js-filter-island\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "div",
+  "lines": "221",
+  "needle": "class=\"filter-island js-filter-island\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/FilterIsland.jsx:4",
+   "needle": "filter-island js-filter-island"
+  }
+ ],
+ "retrievalEligible": false,
+ "retrievalReason": "Fixed floating control (data-state hidden/bar/open) that takes no page height and only works bound to the works list; runtime filter UI, not content.",
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "works.card-list"
+  ],
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "sentence": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "connector": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "leftWords": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 8,
+   "maxWords": 3,
+   "required": true
+  },
+  "rightWords": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 6,
+   "maxWords": 3,
+   "required": true
+  },
+  "allLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "clip-panel",
+   "word-cycle"
+  ],
+  "default": "clip-panel"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.brand"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "desktop": "476.8px wide; opens on hover",
+  "mobile": "358px wide; opens on tap; close X"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [],
+ "measured": {
+  "inFlowAt1440": false,
+  "note": "fixed/overlay or display:none at 1440; takes no page height"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:289",
+   "needle": "### 4.8 Works filter island"
+  },
+  {
+   "cite": "CLONE_SPEC.md:303",
+   "needle": "Persisted in `sessionStorage['jozue:filter']`"
+  }
+ ]
+}

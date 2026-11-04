@@ -1,0 +1,102 @@
+{
+ "id": "showcase.app-window",
+ "title": "App window showcase",
+ "version": "1.0.0",
+ "purpose": "Web projects only: a browser/app frame with the site's screens, device mockups and a next-screen control, sometimes with a short text.",
+ "semantic": {
+  "id": "showcase.app-window",
+  "category": "SHOWCASE"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-app\"]",
+  "file": ".recon/pages/works__billy.html",
+  "tag": "section",
+  "lines": "100",
+  "needle": "class=\"project-app\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentVariant1.jsx:6",
+   "needle": "\"project-app\""
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "screens": {
+   "kind": "mediaList",
+   "minItems": 1,
+   "maxItems": 12,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  },
+  "mockups": {
+   "kind": "mediaList",
+   "minItems": 0,
+   "maxItems": 4,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": false
+  },
+  "text": {
+   "kind": "text",
+   "maxWords": 60,
+   "required": false
+  },
+  "nextLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "scroll-parallax",
+   "lightbox"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "784-3719px (tallest on long web case studies)"
+ },
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 783.9,
+   "max": 3718.6,
+   "instances": 18,
+   "routes": 8
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/works__fnac-darty.html:100",
+   "needle": "class=\"project-app\""
+  }
+ ]
+}

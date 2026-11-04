@@ -1,0 +1,16 @@
+{
+ "id": "primitive.media-image",
+ "title": "Responsive image",
+ "purpose": "Lazy webp image with srcset and a data-tone placeholder; assetRole decides what it may show.",
+ "props": {
+  "assetRole": "closed enum",
+  "ref": "asset ref",
+  "alt": "text<=40 words"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/works__arte.html:106",
+   "needle": "class=\"project-stills-media\""
+  }
+ ]
+}

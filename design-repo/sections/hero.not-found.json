@@ -1,0 +1,82 @@
+{
+ "id": "hero.not-found",
+ "title": "Not-found block",
+ "version": "1.0.0",
+ "purpose": "Full-viewport dark block: 'not found' title, one sentence and a pill back home.",
+ "semantic": {
+  "id": "hero.not-found",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section[class=\"homepage__talk homepage__talk--404\"]",
+  "file": ".recon/pages/404.html",
+  "tag": "section",
+  "lines": "54",
+  "needle": "class=\"homepage__talk homepage__talk--404\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/TalkCta404.jsx:3",
+   "needle": "homepage__talk--404"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirstContent": true,
+  "templates": [
+   "not-found"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "description": {
+   "kind": "text",
+   "maxWords": 10,
+   "required": true
+  },
+  "link": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "roll-ink",
+   "none"
+  ],
+  "default": "roll-ink"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.ink"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "100vh (900)"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 900,
+   "max": 900,
+   "instances": 1,
+   "routes": 1
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

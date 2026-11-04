@@ -1,0 +1,83 @@
+{
+ "id": "shell.intro-preloader",
+ "title": "Intro preloader",
+ "version": "1.0.0",
+ "purpose": "First-visit loader that traces the handwritten J, types the greeting and slides a stage panel away (~2.7s), skipped on return visits.",
+ "semantic": {
+  "id": "shell.intro-preloader",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:div[id=\"js-intro\" class=\"intro\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "div",
+  "lines": "115",
+  "needle": "id=\"js-intro\" class=\"intro\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/IntroOverlay.jsx:5",
+   "needle": "intro__loader"
+  }
+ ],
+ "retrievalEligible": false,
+ "retrievalReason": "Preloader overlay shown once per 30 days (localStorage 'jozue:intro-seen'); removed from the DOM ~3.15s after navigation start. Runtime UI, not page content.",
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "skipLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "greeting": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "preloader-trace",
+   "none"
+  ],
+  "default": "preloader-trace"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.paper"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "all": "Covers the viewport; --intro-push equals innerHeight."
+ },
+ "referenceAssetRoles": [
+  "brand.signature-trace"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "note": "fixed/overlay or display:none at 1440; takes no page height"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:229",
+   "needle": "**Total intro: `html.is-intro` lasts"
+  },
+  {
+   "cite": ".recon/pages/index.html:33",
+   "needle": "jozue:intro-seen"
+  }
+ ]
+}

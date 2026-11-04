@@ -1,0 +1,49 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "not-found",
+ "route": "/404/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Page missing | Ilse Varga",
+  "description": "This address leads nowhere on the studio site."
+ },
+ "brand": {
+  "name": "Ilse Varga",
+  "domain": "ilsevarga.example"
+ },
+ "nodes": [
+  {
+   "section": "shell.page-transition",
+   "content": {},
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.not-found",
+   "content": {
+    "title": "lost page",
+    "description": "Nothing is pinned to this wall.",
+    "link": {
+     "label": "Back to studio",
+     "href": "/"
+    }
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "roll-ink",
+    "reducedMotionFallback": "instant-static"
+   }
+  }
+ ]
+}

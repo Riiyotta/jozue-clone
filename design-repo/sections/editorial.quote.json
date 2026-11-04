@@ -1,0 +1,83 @@
+{
+ "id": "editorial.quote",
+ "title": "Quote with image",
+ "version": "1.0.0",
+ "purpose": "Titled block pairing a large short-line quote (the campaign line) with an image.",
+ "semantic": {
+  "id": "editorial.quote",
+  "category": "EDITORIAL"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-quote-image-container\"]",
+  "file": ".recon/pages/works__msa.html",
+  "tag": "section",
+  "lines": "116",
+  "needle": "class=\"project-quote-image-container\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentMsa.jsx:38",
+   "needle": "project-quote-image-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "quote": {
+   "kind": "text",
+   "maxWords": 30,
+   "required": true
+  },
+  "media": {
+   "kind": "media",
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "lightbox"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 546.2,
+   "max": 902,
+   "instances": 20,
+   "routes": 20
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

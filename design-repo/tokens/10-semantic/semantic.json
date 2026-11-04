@@ -1,0 +1,60 @@
+{
+ "category": "semantic",
+ "resolution": "foundation -> theme -> semantic -> component",
+ "tokens": {
+  "surface.page": {
+   "$value": "{color.white}",
+   "role": "body background, work-detail content blocks"
+  },
+  "surface.paper": {
+   "$value": "{color.paper}",
+   "role": "home hero, awards band, triangle gallery backdrop"
+  },
+  "surface.cream": {
+   "$value": "{color.cream}",
+   "role": "works list, partners band"
+  },
+  "surface.brand": {
+   "$value": "{color.brand-red}",
+   "role": "works header, about band, filter island, hint band, load-more"
+  },
+  "surface.ink": {
+   "$value": "{color.ink}",
+   "role": "let's talk band (home), contact, menu panel, not-found"
+  },
+  "surface.accent": {
+   "$value": "{accent.*}",
+   "role": "per-project band: work head, credits, more-works title, talk band on work pages; resolved from the node's accent token"
+  },
+  "text.primary": {
+   "$value": "{color.ink}",
+   "role": "text on page/paper/cream"
+  },
+  "text.on-dark": {
+   "$value": "{color.white}",
+   "role": "text on brand/ink/accent"
+  },
+  "text.muted-on-dark": {
+   "$value": "{color.mist}",
+   "role": "work category text on hovered card"
+  },
+  "badge.count": {
+   "$value": "{color.pastille-red}",
+   "role": "count pastille background"
+  },
+  "overlay.media-dim": {
+   "$value": "{color.overlay-dim}",
+   "role": "hovered work card overlay"
+  },
+  "stroke.signature": {
+   "$value": "{color.signature}",
+   "role": "intro signature stroke"
+  }
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:54",
+   "needle": "### 2.2 Colors (computed)"
+  }
+ ]
+}

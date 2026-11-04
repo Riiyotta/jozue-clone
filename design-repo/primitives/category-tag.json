@@ -1,0 +1,17 @@
+{
+ "id": "primitive.category-tag",
+ "title": "Category tag",
+ "purpose": "11px category pill on work cards and award entries.",
+ "props": {
+  "label": "text<=3 words"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:260",
+   "needle": "class=\"homepage__work-category\" data-work-category=\"branding\""
+  }
+ ],
+ "tokens": [
+  "font.size.micro"
+ ]
+}

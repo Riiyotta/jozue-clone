@@ -1,0 +1,102 @@
+{
+ "id": "contact.details",
+ "title": "Contact block",
+ "version": "1.0.0",
+ "purpose": "Closing full-viewport dark block: social links, phone and an email pill over the wordmark layer.",
+ "semantic": {
+  "id": "contact.details",
+  "category": "CONVERSION"
+ },
+ "source": {
+  "id": "dom:section[id=\"contact\" class=\"homepage__talk homepage__talk--home\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "601",
+  "needle": "id=\"contact\" class=\"homepage__talk homepage__talk--home\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Contact.jsx:3",
+   "needle": "homepage__talk--home"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "mustBeLast": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "socials": {
+   "kind": "linkList",
+   "minItems": 1,
+   "maxItems": 4,
+   "maxWords": 2,
+   "required": true
+  },
+  "phone": {
+   "kind": "tel",
+   "required": true
+  },
+  "email": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "backgroundMark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.wordmark"
+   ],
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-stagger",
+   "scroll-parallax",
+   "underline-grow",
+   "roll-ink"
+  ],
+  "default": "reveal-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.ink"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "100vh (900)",
+  "768": "710px",
+  "390": "100vh (844)"
+ },
+ "referenceAssetRoles": [
+  "brand.wordmark"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 900,
+   "max": 900,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:178",
+   "needle": "| `#contact` (`.homepage__talk--home`, bg #111319)"
+  }
+ ]
+}

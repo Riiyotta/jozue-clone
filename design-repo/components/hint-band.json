@@ -1,0 +1,22 @@
+{
+ "id": "component.hint-band",
+ "title": "Hint band",
+ "purpose": "55px red band at the hero's foot with a bouncing 'scroll' label; breathes, then sweeps.",
+ "props": {
+  "label": "text<=4 words",
+  "anchor": "#id"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:185",
+   "needle": "class=\"hint-band js-to-scroll\""
+  }
+ ],
+ "motion": [
+  "hint-breathe"
+ ],
+ "tokens": [
+  "hint-band.height",
+  "surface.brand"
+ ]
+}

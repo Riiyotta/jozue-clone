@@ -1,0 +1,120 @@
+{
+ "id": "about.bio",
+ "title": "About band",
+ "version": "1.0.0",
+ "purpose": "Red 'few words' band: 'about me' heading, a skills column/marquee, multi-paragraph bio, availability line and a contact pill, with a small drawn mark.",
+ "semantic": {
+  "id": "about.bio",
+  "category": "ABOUT"
+ },
+ "source": {
+  "id": "dom:section[id=\"about\" class=\"homepage__what js-what\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "529",
+  "needle": "id=\"about\" class=\"homepage__what js-what\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/About.jsx:4",
+   "needle": "homepage__what"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "heading": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "skills": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 16,
+   "maxWords": 3,
+   "required": true
+  },
+  "paragraphs": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 6,
+   "maxWords": 120,
+   "required": true
+  },
+  "availability": {
+   "kind": "text",
+   "maxWords": 10,
+   "required": true
+  },
+  "link": {
+   "kind": "link",
+   "maxWords": 4,
+   "required": true
+  },
+  "mark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.monogram",
+    "brand.signature-trace"
+   ],
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-stagger",
+   "marquee",
+   "signature-draw",
+   "roll-ink"
+  ],
+  "default": "reveal-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.brand"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "1342px; skills as a vertical column",
+  "390": "1677px; skills become a horizontal marquee"
+ },
+ "referenceAssetRoles": [
+  "brand.monogram",
+  "brand.signature-trace"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 1314.5,
+   "max": 1342.5,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:176",
+   "needle": "| `#about` (`.homepage__what`, red)"
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "id": "hero.work-head",
+ "title": "Work page head",
+ "version": "1.0.0",
+ "purpose": "Opening of a case study on the project accent: back link, project name, categories, a one-line mission and the 170px slogan.",
+ "semantic": {
+  "id": "hero.work-head",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-head\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "71",
+  "needle": "class=\"project-head\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectHeadArte.jsx:3",
+   "needle": "project-head"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirstContent": true,
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "backLink": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "name": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "categories": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 5,
+   "maxWords": 3,
+   "required": true
+  },
+  "mission": {
+   "kind": "text",
+   "maxWords": 45,
+   "required": true
+  },
+  "slogan": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 4,
+   "maxWords": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "shared-element-arrival",
+   "mouse-depth",
+   "reveal-stagger"
+  ],
+  "default": "shared-element-arrival"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.accent"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": true
+ },
+ "responsive": {
+  "1440": "568px; slogan 170px",
+  "390": "slogan 67px"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 568,
+   "max": 568,
+   "instances": 36,
+   "routes": 36
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:392",
+   "needle": "| `.project-head` (bg #241f1a, `data-signature-ink=light`)"
+  }
+ ]
+}

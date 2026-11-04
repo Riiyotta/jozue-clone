@@ -1,0 +1,48 @@
+{
+ "category": "radius",
+ "tokens": {
+  "radius.pill": {
+   "$type": "dimension",
+   "$value": "30px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "border-radius:3rem"
+    }
+   ],
+   "usageCount": 6
+  },
+  "radius.circle": {
+   "$type": "dimension",
+   "$value": "50%",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "border-radius:50%"
+    }
+   ],
+   "usageCount": 4
+  },
+  "radius.round-20": {
+   "$type": "dimension",
+   "$value": "20px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "border-radius:2rem"
+    }
+   ],
+   "usageCount": 2
+  },
+  "radius.island": {
+   "$type": "dimension",
+   "$value": "28px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:291",
+     "needle": "clip `inset(calc(100% - 56px) 0 0 round 28px)`"
+    }
+   ]
+  }
+ }
+}

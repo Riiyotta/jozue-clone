@@ -1,0 +1,17 @@
+{
+ "id": "component.skills-marquee",
+ "title": "Skills marquee",
+ "purpose": "List of skills: vertical column on desktop, endless horizontal marquee on mobile.",
+ "props": {
+  "items": "text[]"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:535",
+   "needle": "class=\"homepage__what-ul js-marquee\""
+  }
+ ],
+ "motion": [
+  "marquee"
+ ]
+}

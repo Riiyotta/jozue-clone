@@ -1,0 +1,62 @@
+{
+ "id": "shell.page-transition",
+ "title": "Page transition layer",
+ "version": "1.0.0",
+ "purpose": "Fixed full-viewport layer for colour-band page transitions. Present in every page's DOM; in every measured transition it never animated (the shared-element arrival is used instead).",
+ "semantic": {
+  "id": "shell.page-transition",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:div[id=\"js-transi\" class=\"transi\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "div",
+  "lines": "112",
+  "needle": "id=\"js-transi\" class=\"transi\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Transition.jsx:3",
+   "needle": "js-transi"
+  }
+ ],
+ "retrievalEligible": false,
+ "retrievalReason": "Runtime transition overlay (fixed, opacity 0, z-index -1); in the DOM but never animates in any measured navigation. Not a content unit.",
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirst": true
+ },
+ "variants": [],
+ "content": {},
+ "motion": {
+  "allowed": [
+   "none",
+   "shared-element-arrival",
+   "return-fade"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.ink",
+   "surface.accent"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [],
+ "measured": {
+  "inFlowAt1440": false,
+  "note": "fixed/overlay or display:none at 1440; takes no page height"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:331",
+   "needle": "- **`#js-transi`** (fixed 100vw×100vh"
+  }
+ ]
+}

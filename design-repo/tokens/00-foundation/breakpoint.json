@@ -1,0 +1,77 @@
+{
+ "category": "breakpoint",
+ "tokens": {
+  "breakpoint.xs": {
+   "$type": "dimension",
+   "$value": "374px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "max-width:374px"
+    }
+   ]
+  },
+  "breakpoint.sm": {
+   "$type": "dimension",
+   "$value": "420px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "min-width:420px"
+    }
+   ]
+  },
+  "breakpoint.md-sm": {
+   "$type": "dimension",
+   "$value": "600px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "min-width:600px"
+    }
+   ]
+  },
+  "breakpoint.desktop": {
+   "$type": "dimension",
+   "$value": "767px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "min-width:767px"
+    }
+   ],
+   "note": "Main mobile/desktop split; the engine uses (max-width: 766px).",
+   "usageCount": 84
+  },
+  "breakpoint.lg": {
+   "$type": "dimension",
+   "$value": "1024px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "min-width:1024px"
+    }
+   ]
+  },
+  "breakpoint.xl": {
+   "$type": "dimension",
+   "$value": "1100px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "min-width:1100px"
+    }
+   ]
+  },
+  "breakpoint.max": {
+   "$type": "dimension",
+   "$value": "1399px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "min-width:1399px"
+    }
+   ]
+  }
+ }
+}

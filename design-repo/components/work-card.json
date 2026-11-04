@@ -1,0 +1,37 @@
+{
+ "id": "component.work-card",
+ "title": "Work card",
+ "purpose": "Full-width row: centered 101px title, category tags, hidden media revealed on hover (226->407px).",
+ "props": {
+  "title": "text<=4 words",
+  "href": "work route",
+  "categories": "category-tag[<=4]",
+  "accent": "accent token",
+  "slogan": "text[<=4]",
+  "media": "media-image(work.card-media)",
+  "heroMedia": "media-image(work.hero-media)"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:255",
+   "needle": "class=\"js-homepage-work homepage__work homepage__work--web\""
+  },
+  {
+   "cite": "src/components/WorksList.jsx:12",
+   "needle": "homepage__work-link"
+  }
+ ],
+ "motion": [
+  "card-grow",
+  "reveal-stagger",
+  "shared-element-arrival"
+ ],
+ "tokens": [
+  "card.work.height",
+  "font.size.work-title"
+ ],
+ "composes": [
+  "primitive.category-tag",
+  "primitive.media-image"
+ ]
+}

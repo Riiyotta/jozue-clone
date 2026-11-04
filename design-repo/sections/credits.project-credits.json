@@ -1,0 +1,97 @@
+{
+ "id": "credits.project-credits",
+ "title": "Credits",
+ "version": "1.0.0",
+ "purpose": "Accent band titled 'Credits' (collapsible on mobile) with credit blocks: agency, role, production, team.",
+ "semantic": {
+  "id": "credits.project-credits",
+  "category": "CREDITS"
+ },
+ "source": {
+  "id": "dom:section[id=\"project-credit\" class=\"project-credit\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "134",
+  "needle": "id=\"project-credit\" class=\"project-credit\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentArte.jsx:64",
+   "needle": "project-credit"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "blocks": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 4,
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "lines": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 10,
+     "maxWords": 6,
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "none"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.accent"
+  ],
+  "text": [
+   "text.on-dark"
+  ],
+  "accent": true
+ },
+ "responsive": {
+  "1440": "title band 170px + grid 185-441px",
+  "390": "collapsed behind its title (data-collapse max-width 766px)"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 329.5,
+   "max": 611,
+   "instances": 36,
+   "routes": 36
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:403",
+   "needle": "Credits title band | [0, 4460.2, 1440, 170]"
+  }
+ ]
+}

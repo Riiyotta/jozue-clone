@@ -1,0 +1,158 @@
+{
+ "category": "color",
+ "tokens": {
+  "color.ink": {
+   "$type": "color",
+   "$value": "#111319",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "color:#111319"
+    },
+    {
+     "cite": "CLONE_SPEC.md:58",
+     "needle": "| Ink / text / dark sections"
+    }
+   ],
+   "usageCount": 28
+  },
+  "color.white": {
+   "$type": "color",
+   "$value": "#ffffff",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "color:#fff"
+    },
+    {
+     "cite": "CLONE_SPEC.md:59",
+     "needle": "| Body bg / work card bg"
+    }
+   ],
+   "usageCount": 68
+  },
+  "color.paper": {
+   "$type": "color",
+   "$value": "#f3f2f0",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "#f3f2f0"
+    },
+    {
+     "cite": "CLONE_SPEC.md:60",
+     "needle": "| Hero `#intro` bg"
+    }
+   ],
+   "usageCount": 5
+  },
+  "color.cream": {
+   "$type": "color",
+   "$value": "#f7f2e7",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "#f7f2e7"
+    },
+    {
+     "cite": "CLONE_SPEC.md:63",
+     "needle": "| Works list bg"
+    }
+   ],
+   "usageCount": 2
+  },
+  "color.brand-red": {
+   "$type": "color",
+   "$value": "#f73326",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "#f73326"
+    },
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--hint-color:#f73326"
+    },
+    {
+     "cite": "CLONE_SPEC.md:61",
+     "needle": "| Brand red:"
+    }
+   ],
+   "usageCount": 8
+  },
+  "color.pastille-red": {
+   "$type": "color",
+   "$value": "#d12525",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "#d12525"
+    },
+    {
+     "cite": "CLONE_SPEC.md:62",
+     "needle": "| Pastille bg (counts)"
+    }
+   ],
+   "usageCount": 2
+  },
+  "color.mist": {
+   "$type": "color",
+   "$value": "#dcdcd9",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "#dcdcd9"
+    },
+    {
+     "cite": "CLONE_SPEC.md:67",
+     "needle": "| Work hover category text/border"
+    }
+   ],
+   "usageCount": 12
+  },
+  "color.signature": {
+   "$type": "color",
+   "$value": "#050507",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--intro-signature-color:#050507"
+    },
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "signatureColor:`#050507`"
+    }
+   ]
+  },
+  "color.home-j": {
+   "$type": "color",
+   "$value": "#dcdbdb",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--home-j-color:#dcdbdb"
+    },
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "homeJColor:`#dcdbdb`"
+    }
+   ],
+   "opacity": 0.1
+  },
+  "color.overlay-dim": {
+   "$type": "color",
+   "$value": "rgba(0,0,0,0.3)",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "#0000004d"
+    },
+    {
+     "cite": "CLONE_SPEC.md:66",
+     "needle": "| Work hover overlay `::before`"
+    }
+   ],
+   "usageCount": 3
+  }
+ }
+}

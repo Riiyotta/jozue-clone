@@ -1,0 +1,94 @@
+{
+ "id": "editorial.mission-text",
+ "title": "Mission text",
+ "version": "1.0.0",
+ "purpose": "Centered paragraph telling the brief and the idea; optional small title.",
+ "semantic": {
+  "id": "editorial.mission-text",
+  "category": "EDITORIAL"
+ },
+ "source": {
+  "id": "dom:p[class=\"project-mission-bis\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "p",
+  "lines": "99",
+  "needle": "class=\"project-mission-bis\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentArte.jsx:6",
+   "needle": "project-mission-bis"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [
+  "plain",
+  "text",
+  "titled",
+  "web"
+ ],
+ "content": {
+  "variant": {
+   "kind": "enum",
+   "values": [
+    "plain",
+    "text",
+    "titled",
+    "web"
+   ],
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "text": {
+   "kind": "text",
+   "maxWords": 90,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "581px column"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 28,
+   "max": 280.5,
+   "instances": 42,
+   "routes": 34
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:399",
+   "needle": "| `.project-mission-bis` | [429.5, 1496, 581, 140.3]"
+  }
+ ]
+}

@@ -1,0 +1,1042 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "home",
+ "route": "/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Josué Pichot, freelance art director and photographer in Paris",
+  "description": "Paris-based freelance art director, photographer, director and product designer. 15+ years in advertising and digital. Available in-house or remote."
+ },
+ "brand": {
+  "name": "Josué Pichot",
+  "domain": "jozue.fr"
+ },
+ "nodes": [
+  {
+   "section": "shell.page-transition",
+   "content": {},
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.intro-preloader",
+   "content": {
+    "skipLabel": "Skip",
+    "greeting": "Hi"
+   },
+   "tokens": {
+    "surface": "surface.paper",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "preloader-trace",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.site-menu",
+   "content": {
+    "links": [
+     {
+      "label": "About.",
+      "href": "/#about"
+     },
+     {
+      "label": "Works.",
+      "href": "/#works"
+     },
+     {
+      "label": "Contact.",
+      "href": "/#contact"
+     }
+    ],
+    "languageLinks": [
+     {
+      "label": "Français.",
+      "href": "/fr/"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "panel-slide",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "hero.home-intro",
+   "content": {
+    "navLinks": [
+     {
+      "label": "About",
+      "href": "#about"
+     },
+     {
+      "label": "Works",
+      "href": "#works"
+     },
+     {
+      "label": "Contact",
+      "href": "#contact"
+     }
+    ],
+    "greeting": [
+     "Hi,",
+     "I am Josué."
+    ],
+    "titleVariants": [
+     {
+      "line1": "art director",
+      "line2": "+ photographer"
+     },
+     {
+      "line1": "creative",
+      "line2": "+ director"
+     },
+     {
+      "line1": "product",
+      "line2": "+ brand designer"
+     }
+    ],
+    "description": [
+     "I am a Paris-based multidisciplinary art director and creator. 15+ years crafting visual stories in digital and advertising.",
+     "Passionate about unique design and capturing moments through photography and film.\nGenerative AIs are my interns."
+    ],
+    "addressLinks": [
+     {
+      "label": "93310 Le Pré-Saint-Gervais",
+      "href": "https://www.google.com/maps/search/?api=1&query=93310%20Le%20Pr%C3%A9-Saint-Gervais"
+     },
+     {
+      "label": "+33 6 61 77 32 20",
+      "href": "tel:+33661773220"
+     },
+     {
+      "label": "hi@jozue.fr",
+      "href": "mailto:hi@jozue.fr"
+     }
+    ],
+    "scrollHint": "Explore my work",
+    "backgroundMark": {
+     "assetRole": "brand.signature-trace",
+     "ref": "#trace-j",
+     "alt": ""
+    }
+   },
+   "tokens": {
+    "surface": "surface.paper",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "hero-entrance",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "works.selected-header",
+   "content": {
+    "title": "selected works",
+    "count": 18,
+    "filterSentence": "As a multidisciplinary creative, I do",
+    "categoriesLeft": [
+     {
+      "label": "Graphic design",
+      "slug": "graphic-design",
+      "count": 6
+     },
+     {
+      "label": "Copywriting",
+      "slug": "copywriting",
+      "count": 4
+     },
+     {
+      "label": "Photography",
+      "slug": "photography",
+      "count": 9
+     },
+     {
+      "label": "Filmmaking",
+      "slug": "filmmaking",
+      "count": 4
+     },
+     {
+      "label": "Art Direction",
+      "slug": "art-direction",
+      "count": 8
+     },
+     {
+      "label": "Product design",
+      "slug": "product-design",
+      "count": 2
+     }
+    ],
+    "categoriesRight": [
+     {
+      "label": "Campaigns",
+      "slug": "campaign",
+      "count": 5
+     },
+     {
+      "label": "Websites",
+      "slug": "websites",
+      "count": 3
+     },
+     {
+      "label": "Branding",
+      "slug": "branding",
+      "count": 3
+     },
+     {
+      "label": "Social Media",
+      "slug": "social-media",
+      "count": 4
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.brand",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "utility.filter-island",
+   "content": {
+    "sentence": "As a multidisciplinary creative, I do",
+    "connector": "for",
+    "leftWords": [
+     "Graphic design",
+     "Copywriting",
+     "Photography",
+     "Filmmaking",
+     "Art Direction",
+     "Product design"
+    ],
+    "rightWords": [
+     "Campaigns",
+     "Websites",
+     "Branding",
+     "Social Media"
+    ],
+    "allLabel": "all"
+   },
+   "tokens": {
+    "surface": "surface.brand",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "word-cycle",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "works.card-list",
+   "content": {
+    "cards": [
+     {
+      "title": "Billy",
+      "href": "/works/billy/",
+      "categories": [
+       "Product design",
+       "Branding"
+      ],
+      "accent": "accent.violet",
+      "slogan": [
+       "sold out",
+       "by",
+       "design"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/billy-hero-1.CC0g4fbC_Z1jlXRJ.webp",
+       "alt": "Billy"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/billy-hero-1.CC0g4fbC_Z2jmMLg.webp",
+       "alt": "Billy"
+      }
+     },
+     {
+      "title": "Hoppy Road",
+      "href": "/works/hoppy-road/",
+      "categories": [
+       "Photography",
+       "Social Media"
+      ],
+      "accent": "accent.night",
+      "slogan": [
+       "hop",
+       "you'll",
+       "enjoy"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/hoppy-road-hero-1.BMMMc-Un_Z1nHmbq.webp",
+       "alt": "Hoppy Road"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/hoppy-road-hero-1.BMMMc-Un_1MQPQG.webp",
+       "alt": "Hoppy Road"
+      }
+     },
+     {
+      "title": "Vianney",
+      "href": "/works/vianney/",
+      "categories": [
+       "Product design",
+       "Websites"
+      ],
+      "accent": "accent.graphite",
+      "slogan": [
+       "through",
+       "the",
+       "clouds"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/vianney-hero-1.CgobLKL4_1R8PXa.webp",
+       "alt": "Vianney"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/vianney-hero-1.CgobLKL4_18D1y4.webp",
+       "alt": "Vianney"
+      }
+     },
+     {
+      "title": "Graille sur le rail",
+      "href": "/works/graille-sur-le-rail/",
+      "categories": [
+       "Filmmaking",
+       "Art Direction",
+       "Photography",
+       "Graphic design"
+      ],
+      "accent": "accent.cobalt",
+      "slogan": [
+       "île",
+       "-de-",
+       "food"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/graille-sur-le-rail-hero-1.CcNlupbV_CmXo9.webp",
+       "alt": "Graille sur le rail"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/graille-sur-le-rail-hero-1.CcNlupbV_2p5tnX.webp",
+       "alt": "Graille sur le rail"
+      }
+     },
+     {
+      "title": "Mijote",
+      "href": "/works/mijote/",
+      "categories": [
+       "Branding",
+       "Copywriting",
+       "Graphic design"
+      ],
+      "accent": "accent.ash",
+      "slogan": [
+       "brothers",
+       "in",
+       "broth"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/mijote-hero-1.ChxGQTe1_jxMKQ.webp",
+       "alt": "Mijote"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/mijote-hero-1.ChxGQTe1_ZXEvfc.webp",
+       "alt": "Mijote"
+      }
+     },
+     {
+      "title": "La Canute",
+      "href": "/works/la-canute/",
+      "categories": [
+       "Photography",
+       "Social Media"
+      ],
+      "accent": "accent.slate-blue",
+      "slogan": [
+       "let",
+       "it",
+       "beer"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/la-canute-hero-1.CRQVCLbv_17Wgnc.webp",
+       "alt": "La Canute Lyonnaise"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/la-canute-hero-1.CRQVCLbv_ZaFEgP.webp",
+       "alt": "La Canute"
+      }
+     },
+     {
+      "title": "Le Monde Plus",
+      "href": "/works/le-monde-loreal/",
+      "categories": [
+       "Photography"
+      ],
+      "accent": "accent.black",
+      "slogan": [
+       "faces",
+       "behind",
+       "beauty"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/le-monde-loreal-hero-1.D_pOBTBF_Z1q2QS4.webp",
+       "alt": "Le Monde & L'Oréal"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/le-monde-loreal-hero-1.D_pOBTBF_ZQq8G6.webp",
+       "alt": "Le Monde Plus"
+      }
+     },
+     {
+      "title": "Arte",
+      "href": "/works/arte/",
+      "categories": [
+       "Art Direction",
+       "Campaign",
+       "Copywriting",
+       "Graphic design"
+      ],
+      "accent": "accent.umber",
+      "slogan": [
+       "arte.tv",
+       "& chill"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/arte-hero-1.DiJqoqfB_2oyUDL.webp",
+       "alt": "Arte"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/arte-hero-1.DiJqoqfB_1YzdRy.webp",
+       "alt": "Arte"
+      }
+     },
+     {
+      "title": "McCain",
+      "href": "/works/mc-cain/",
+      "categories": [
+       "Photography",
+       "Filmmaking",
+       "Social Media"
+      ],
+      "accent": "accent.petrol",
+      "slogan": [
+       "from",
+       "the",
+       "roots"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/mc-cain-hero-1.vhK0BZkW_Z1yBCs7.webp",
+       "alt": "McCain"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/mc-cain-hero-1.vhK0BZkW_1DDYb6.webp",
+       "alt": "McCain"
+      }
+     },
+     {
+      "title": "MSA",
+      "href": "/works/msa/",
+      "categories": [
+       "Photography",
+       "Campaign"
+      ],
+      "accent": "accent.navy",
+      "slogan": [
+       "right",
+       "beside",
+       "farmers"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/msa-hero-1.DztTOe81_JWhee.webp",
+       "alt": "Mutualité sociale agricole"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/msa-hero-1.DztTOe81_ZW2kAT.webp",
+       "alt": "MSA"
+      }
+     },
+     {
+      "title": "Brico Dépôt",
+      "href": "/works/brico-depot/",
+      "categories": [
+       "Branding",
+       "Art Direction",
+       "Graphic design"
+      ],
+      "accent": "accent.vermilion",
+      "slogan": [
+       "new",
+       "low cost"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/Group-34.CVfZwP6N_pTHSS.webp",
+       "alt": "Brico Dépôt"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/Group-34.CVfZwP6N_ZACUhb.webp",
+       "alt": "Brico Dépôt"
+      }
+     },
+     {
+      "title": "YouTube Ads",
+      "href": "/works/youtube-ads/",
+      "categories": [
+       "Campaign",
+       "Filmmaking",
+       "Photography",
+       "Copywriting"
+      ],
+      "accent": "accent.signal-red",
+      "slogan": [
+       "more",
+       "than just",
+       "viewers"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/youtube-ads-hero-hd.znaO_Iq3_Z1IVaXi.webp",
+       "alt": "YouTube Ads"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/youtube-ads-hero-hd.znaO_Iq3_ZoGKym.webp",
+       "alt": "YouTube Ads"
+      }
+     },
+     {
+      "title": "Séries Mania",
+      "href": "/works/series-mania/",
+      "categories": [
+       "Websites",
+       "Art Direction",
+       "Graphic design"
+      ],
+      "accent": "accent.indigo",
+      "slogan": [
+       "binge",
+       "like a",
+       "pro"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/series-mania-hero-1.D0usZGbq_Z18puLd.webp",
+       "alt": "Séries Mania"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/series-mania-hero-1.D0usZGbq_17cIHH.webp",
+       "alt": "Séries Mania"
+      }
+     },
+     {
+      "title": "Nicolas Feuillatte",
+      "href": "/works/nicolas-feuillatte/",
+      "categories": [
+       "Photography",
+       "Art Direction"
+      ],
+      "accent": "accent.teal",
+      "slogan": [
+       "let's",
+       "drink",
+       "to that"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/DJI_0010-1.BHg-hdZw_Ze4SAV.webp",
+       "alt": "Nicolas Feuillatte"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/DJI_0010-1.BHg-hdZw_Z1LnBng.webp",
+       "alt": "Nicolas Feuillatte"
+      }
+     },
+     {
+      "title": "Instax",
+      "href": "/works/instax/",
+      "categories": [
+       "Filmmaking",
+       "Campaign"
+      ],
+      "accent": "accent.abyss",
+      "slogan": [
+       "all",
+       "I want",
+       "for Xmas"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/Capture-decran-2023-10-25-a-21.52-1.BMKusc7o_obDg5.webp",
+       "alt": "Instax"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/Capture-decran-2023-10-25-a-21.52-1.BMKusc7o_ZSmaox.webp",
+       "alt": "Instax"
+      }
+     },
+     {
+      "title": "Athletic Brewing",
+      "href": "/works/athletic-brewing-company/",
+      "categories": [
+       "Photography",
+       "Art Direction",
+       "Social Media"
+      ],
+      "accent": "accent.azure",
+      "slogan": [
+       "sober",
+       "is the",
+       "new cool"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/gouttes-gif.e5FDYHrj_Z2phF64.webp",
+       "alt": "Athletic Brewing Company"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/gouttes-gif.e5FDYHrj_Z25erfT.webp",
+       "alt": "Athletic Brewing"
+      }
+     },
+     {
+      "title": "YouTube",
+      "href": "/works/youtube/",
+      "categories": [
+       "Copywriting",
+       "Campaign",
+       "Art Direction"
+      ],
+      "accent": "accent.signal-red",
+      "slogan": [
+       "just",
+       "do it",
+       "yourself"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/BEACON_HERVE_133_V2_epson-1-1.KHPp2VB6_Z2eXYal.webp",
+       "alt": "YouTube"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/BEACON_HERVE_133_V2_epson-1-1.KHPp2VB6_1GRlm0.webp",
+       "alt": "YouTube"
+      }
+     },
+     {
+      "title": "Fnac Darty",
+      "href": "/works/fnac-darty/",
+      "categories": [
+       "Websites",
+       "Art Direction",
+       "Graphic design"
+      ],
+      "accent": "accent.charcoal",
+      "slogan": [
+       "united",
+       "they",
+       "stand"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/fnac-darty-hero-1.MXR4Th_G_14kJyv.webp",
+       "alt": "Fnac Darty"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/fnac-darty-hero-1.MXR4Th_G_E9V9t.webp",
+       "alt": "Fnac Darty"
+      }
+     }
+    ],
+    "loadMoreLabel": "load more?",
+    "mobileInitialCount": 9
+   },
+   "tokens": {
+    "surface": "surface.cream",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "card-grow",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "cta.got-project",
+   "content": {
+    "label": "Got a project?",
+    "target": "#contact"
+   },
+   "tokens": {
+    "surface": "surface.cream",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "anchor-scroll",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "cta.lets-talk",
+   "content": {
+    "title": "let's talk",
+    "description": "I'm available for freelance work,",
+    "availability": "in-house or remote",
+    "link": {
+     "label": "Get in touch",
+     "href": "#contact"
+    },
+    "backgroundMark": {
+     "assetRole": "brand.wordmark",
+     "ref": "/_astro/jozue-logo-full.DpMZCk-F.svg",
+     "alt": "jozue"
+    }
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "proof.awards",
+   "content": {
+    "title": "Awards & Archives",
+    "awards": [
+     {
+      "context": "personal project",
+      "title": "11 mois sans toi(t)",
+      "href": "https://www.11moissanstoit.com",
+      "tags": [
+       "Art Direction",
+       "Photography"
+      ],
+      "recognitions": [
+       "1 Special Kudos award CSSDA",
+       "Best UI Design, Best UX Design and Best Innovation CSSDA"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Disney / agency FCINQ",
+      "title": "Star Wars Rogue One",
+      "href": "https://thefwa.com/cases/rogue-one-a-star-wars-story-p2",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "2 Webby Awards",
+       "1 TheFWA",
+       "1 Awwwards"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client FCINQ / agency FCINQ",
+      "title": "FCINQ agency website",
+      "href": "https://fcinq.com",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 Awwwards",
+       "1 TheFWA"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Havana Club / agency FCINQ",
+      "title": "Nothing compares to Havana",
+      "href": "https://thefwa.com/cases/nothing-compares-to-havana",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 TheFWA"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Nicolas Errera / agency FCINQ",
+      "title": "Nicolas Errera",
+      "href": "https://www.awwwards.com/sites/nicolas-errera",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 Awwwards"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Havana Club / agency FCINQ",
+      "title": "Havana Mojito",
+      "href": "https://thefwa.com/cases/havana-mojito",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 TheFWA"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Arte / agency FCINQ",
+      "title": "Récits d’Égypte",
+      "href": "https://www.awwwards.com/sites/recits-d-egypte",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 Awwwards",
+       "1 TheFWA"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Ecofolio / agency FCINQ",
+      "title": "Recyclons nos papiers",
+      "href": "https://thefwa.com/cases/recyclons-nos-papiers",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 TheFWA"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Arte / agency FCINQ",
+      "title": "Arte, Tandems",
+      "href": "https://www.awwwards.com/sites/tandems",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 TheFWA",
+       "1 Awwwards"
+      ],
+      "recognitionSource": "real"
+     },
+     {
+      "context": "client Label Cinq7, Wagram Music / agency FCINQ",
+      "title": "Cinq7",
+      "href": "https://www.awwwards.com/sites/cinq7-music-label",
+      "tags": [
+       "Art Direction",
+       "Graphic design"
+      ],
+      "recognitions": [
+       "1 Awwwards"
+      ],
+      "recognitionSource": "real"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.paper",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "about.bio",
+   "content": {
+    "label": "Few words",
+    "heading": "about me",
+    "skills": [
+     "Graphic Design",
+     "Art Direction",
+     "Copywriting",
+     "Visual Identity",
+     "Digital Design",
+     "Photography",
+     "Filmmaking",
+     "&more"
+    ],
+    "paragraphs": [
+     "I’ve enjoyed drawing since I could barely hold a pen.\nLater, classmates were paying me to make their artwork.\nAs a teenager, I was that friend who always took pictures with a disposable camera and made a wall of all the prints.\nGraffiti shook my world before anyone called it street art.\nI’m a middle-class dude from the Paris suburbs: hip hop is my culture.",
+     "I started my studies at Gobelins learning Flash and Director. Well, that’s how old I am.\nMy last studies at Gobelins were about mastering flash lighting for studio photography.",
+     "I created and ran a digital creative studio for 15 years, working for renowned music artists, blockbusters, platforms, luxury, lifestyle, start-ups and food & beverage brands.\nI aim to create impactful, engaging and emotionally resonant work. From advertising campaign writing to branding and graphic design, I ensure each deliverable reflects meticulous attention to detail and quality, whether I’m personally involved in execution or collaborating with other talented individuals.",
+     "About my day rate: it will be simpler if you give me your budget, and I’ll tell you if I fit in.\n(I work with “big” clients and small ones, the proof is on my Insta.)"
+    ],
+    "availability": "I’m available for freelance work, in-house or remote",
+    "link": {
+     "label": "Get in touch",
+     "href": "#contact"
+    },
+    "mark": {
+     "assetRole": "brand.monogram",
+     "ref": "/_astro/jozue-logo-small.DJpN4TMc.svg",
+     "alt": "jozue"
+    }
+   },
+   "tokens": {
+    "surface": "surface.brand",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "proof.partners",
+   "content": {
+    "title": "Partners in crime",
+    "partners": [
+     {
+      "name": "VIVAN",
+      "role": "Creative collective",
+      "href": "https://vivan.io",
+      "logo": {
+       "assetRole": "partner.logo",
+       "ref": "/_astro/vivan_logo.DppagFzd_Z1G4OO6.webp",
+       "alt": "VIVAN"
+      }
+     },
+     {
+      "name": "Alexandre Desane",
+      "role": "Front-end Developer",
+      "href": "https://alxdsn.fr/",
+      "logo": {
+       "assetRole": "partner.logo",
+       "ref": "/_astro/alexandre_desane_logo.BDiVc_0X_Z1Efejm.webp",
+       "alt": "Alexandre Desane"
+      }
+     },
+     {
+      "name": "Basile Tournier",
+      "role": "Art Director / 3D Designer",
+      "href": "https://www.basiletournier.com/",
+      "logo": {
+       "assetRole": "partner.logo",
+       "ref": "/_astro/basile_tournier_logo.Bb9DaAIR_Z1ODoFb.webp",
+       "alt": "Basile Tournier"
+      }
+     },
+     {
+      "name": "Jonhate (Jonathan Guyader)",
+      "role": "Art Director / Motion Designer",
+      "href": "https://jonhate.tv/",
+      "logo": {
+       "assetRole": "partner.logo",
+       "ref": "/_astro/jonathan_guyader_logo.CcoP4McT_hqCtj.webp",
+       "alt": "Jonhate (Jonathan Guyader)"
+      }
+     },
+     {
+      "name": "quatrevingts",
+      "role": "Graphic Designer",
+      "href": "https://quatre-vingts.design/",
+      "logo": {
+       "assetRole": "partner.logo",
+       "ref": "/_astro/quatrevingts_logo.DRQQCTaJ_1bTAV0.webp",
+       "alt": "quatrevingts"
+      }
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.cream",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "contact.details",
+   "content": {
+    "socials": [
+     {
+      "label": "instagram",
+      "href": "https://www.instagram.com/__jozue__"
+     },
+     {
+      "label": "bluesky",
+      "href": "https://bsky.app/profile/jozue.bsky.social"
+     },
+     {
+      "label": "linkedin",
+      "href": "https://fr.linkedin.com/in/jopichot"
+     }
+    ],
+    "phone": "tel:+33661773220",
+    "email": {
+     "label": "hi@jozue.fr",
+     "href": "mailto:hi@jozue.fr"
+    },
+    "backgroundMark": {
+     "assetRole": "brand.wordmark",
+     "ref": "/_astro/jozue-logo-full.DpMZCk-F.svg",
+     "alt": "jozue"
+    }
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "media.reels",
+ "title": "Video reels",
+ "version": "1.0.0",
+ "purpose": "Titled row of self-hosted video reels with posters, play controls and captions.",
+ "semantic": {
+  "id": "media.reels",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-reels]",
+  "file": ".recon/pages/works__graille-sur-le-rail.html",
+  "tag": "section",
+  "lines": "159",
+  "needle": "class=\"project-reels"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentGrailleSurLeRail.jsx:123",
+   "needle": "project-reels"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "reels": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 6,
+   "fields": {
+    "poster": {
+     "kind": "media",
+     "assetRoles": [
+      "work.gallery-media"
+     ],
+     "required": true
+    },
+    "video": {
+     "kind": "media",
+     "assetRoles": [
+      "work.video"
+     ],
+     "required": true
+    },
+    "caption": {
+     "kind": "text",
+     "maxWords": 12,
+     "required": false
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "none"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [
+  "work.video",
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "placeholder.project-video",
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 360,
+   "max": 672.6,
+   "instances": 8,
+   "routes": 4
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

@@ -1,0 +1,131 @@
+{
+ "id": "index.more-works",
+ "title": "More works",
+ "version": "1.0.0",
+ "purpose": "Darker accent band titled 'More works' followed by exactly three work cards (same card component as home).",
+ "semantic": {
+  "id": "index.more-works",
+  "category": "INDEX"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-more-works\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "151",
+  "needle": "class=\"project-more-works\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/MoreWorksTitle.jsx:4",
+   "needle": "project-more-works"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "cards": {
+   "kind": "items",
+   "minItems": 3,
+   "maxItems": 3,
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "href": {
+     "kind": "href",
+     "required": true
+    },
+    "categories": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 4,
+     "maxWords": 3,
+     "required": true
+    },
+    "accent": {
+     "kind": "accentToken",
+     "required": true
+    },
+    "slogan": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 4,
+     "maxWords": 3,
+     "required": false
+    },
+    "media": {
+     "kind": "media",
+     "assetRoles": [
+      "work.card-media"
+     ],
+     "required": true
+    },
+    "heroMedia": {
+     "kind": "media",
+     "assetRoles": [
+      "work.hero-media"
+     ],
+     "required": false
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "card-grow",
+   "reveal-stagger",
+   "shared-element-arrival"
+  ],
+  "default": "card-grow"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.accent"
+  ],
+  "text": [
+   "text.on-dark",
+   "text.primary"
+  ],
+  "accent": true
+ },
+ "responsive": {
+  "1440": "279px band + 678px list"
+ },
+ "referenceAssetRoles": [
+  "work.card-media",
+  "work.hero-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 957,
+   "max": 957,
+   "instances": 36,
+   "routes": 36
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:405",
+   "needle": "| More-works list | [0, 5094.2, 1440, 678]"
+  }
+ ]
+}

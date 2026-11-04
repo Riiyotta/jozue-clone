@@ -1,0 +1,17 @@
+{
+ "id": "primitive.label-h4",
+ "title": "Section label",
+ "purpose": "13px uppercase bold label that names a band (Awards & Archives, Few words, Credits).",
+ "props": {
+  "text": "text<=4 words"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:423",
+   "needle": "class=\"homepage__award-title h4 bold uppercase\""
+  }
+ ],
+ "tokens": [
+  "font.size.label"
+ ]
+}

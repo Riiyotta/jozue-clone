@@ -1,0 +1,17 @@
+{
+ "id": "primitive.back-link",
+ "title": "Back link",
+ "purpose": "32x32 arrow returning to /#works from a work page.",
+ "props": {
+  "href": "/#works"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/works__arte.html:76",
+   "needle": "class=\"project-back js-back\""
+  }
+ ],
+ "motion": [
+  "return-fade"
+ ]
+}

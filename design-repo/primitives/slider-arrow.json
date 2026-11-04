@@ -1,0 +1,17 @@
+{
+ "id": "primitive.slider-arrow",
+ "title": "Slider arrow",
+ "purpose": "9x15 chevron button for horizontal sliders.",
+ "props": {
+  "direction": "previous|next"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:173",
+   "needle": "class=\"button-slide button-slide--next js-slider-button-right\""
+  }
+ ],
+ "motion": [
+  "slider-drag"
+ ]
+}

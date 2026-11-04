@@ -1,0 +1,86 @@
+{
+ "id": "gallery.stills",
+ "title": "Stills gallery",
+ "version": "1.0.0",
+ "purpose": "Titled gallery: one large still beside two stacked verticals (or a wide variant), each opening the lightbox.",
+ "semantic": {
+  "id": "gallery.stills",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-stills-container\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "100",
+  "needle": "class=\"project-stills-container\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentArte.jsx:10",
+   "needle": "project-stills-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "media": {
+   "kind": "mediaList",
+   "minItems": 1,
+   "maxItems": 5,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "lightbox"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "1041px block, big left 692.7x1039 + two 344.3"
+ },
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 587.3,
+   "max": 1119,
+   "instances": 46,
+   "routes": 24
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:400",
+   "needle": "| Stills gallery | [199.5, 1809.3, 1041, 1043]"
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "id": "hero.home-intro",
+ "title": "Home hero",
+ "version": "1.0.0",
+ "purpose": "Page-opening introduction: anchor nav, greeting, a 170px rotating role title, two short description paragraphs, contact address, and a red hint band inviting to scroll.",
+ "semantic": {
+  "id": "hero.home-intro",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section[id=\"intro\" class=\"js-infos homepage__infos\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "141",
+  "needle": "id=\"intro\" class=\"js-infos homepage__infos\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Hero.jsx:3",
+   "needle": "homepage__infos"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirstContent": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "navLinks": {
+   "kind": "linkList",
+   "minItems": 1,
+   "maxItems": 3,
+   "maxWords": 2,
+   "required": true
+  },
+  "greeting": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 2,
+   "maxWords": 4,
+   "required": true
+  },
+  "titleVariants": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 3,
+   "fields": {
+    "line1": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "line2": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    }
+   },
+   "required": true
+  },
+  "description": {
+   "kind": "textList",
+   "minItems": 1,
+   "maxItems": 2,
+   "maxWords": 25,
+   "required": true
+  },
+  "addressLinks": {
+   "kind": "linkList",
+   "minItems": 1,
+   "maxItems": 3,
+   "maxWords": 6,
+   "required": true
+  },
+  "scrollHint": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "backgroundMark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.signature-trace"
+   ],
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "hero-entrance",
+   "title-rotate",
+   "mouse-depth",
+   "hint-breathe",
+   "anchor-scroll"
+  ],
+  "default": "hero-entrance"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.paper"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "height 100vh (900); title 170px; description in 3 columns",
+  "768": "title 88.38px; description stacked",
+  "390": "title 67px; description becomes a swipe slider with dots; address below"
+ },
+ "referenceAssetRoles": [
+  "brand.signature-trace"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 900,
+   "max": 900,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:152",
+   "needle": "| `#intro` (`.homepage__infos`, bg #f3f2f0)"
+  },
+  {
+   "cite": "CLONE_SPEC.md:115",
+   "needle": "| Hero title `h1.homepage__main-title`"
+  }
+ ]
+}

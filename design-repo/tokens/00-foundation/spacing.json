@@ -1,0 +1,135 @@
+{
+ "category": "spacing",
+ "tokens": {
+  "space.4": {
+   "$type": "dimension",
+   "$value": "4px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": ".4rem"
+    }
+   ]
+  },
+  "space.6": {
+   "$type": "dimension",
+   "$value": "6px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": ".6rem"
+    }
+   ]
+  },
+  "space.10": {
+   "$type": "dimension",
+   "$value": "10px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "1rem"
+    }
+   ]
+  },
+  "space.12": {
+   "$type": "dimension",
+   "$value": "12px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "1.2rem"
+    }
+   ]
+  },
+  "space.16": {
+   "$type": "dimension",
+   "$value": "16px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "1.6rem"
+    }
+   ]
+  },
+  "space.20": {
+   "$type": "dimension",
+   "$value": "20px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "2rem"
+    }
+   ]
+  },
+  "space.24": {
+   "$type": "dimension",
+   "$value": "24px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "2.4rem"
+    }
+   ]
+  },
+  "space.34": {
+   "$type": "dimension",
+   "$value": "34px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "3.4rem"
+    }
+   ]
+  },
+  "space.38": {
+   "$type": "dimension",
+   "$value": "38px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "3.8rem"
+    }
+   ]
+  },
+  "space.76": {
+   "$type": "dimension",
+   "$value": "76px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "7.6rem"
+    }
+   ]
+  },
+  "space.100": {
+   "$type": "dimension",
+   "$value": "100px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "10rem"
+    }
+   ]
+  },
+  "space.103": {
+   "$type": "dimension",
+   "$value": "103px",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "10.3rem"
+    }
+   ]
+  },
+  "space.gutter": {
+   "$type": "dimension",
+   "$value": "max(3.8rem, 100vw / 12)",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "--gutter:max(3.8rem, 100vw / 12)"
+    }
+   ]
+  }
+ }
+}

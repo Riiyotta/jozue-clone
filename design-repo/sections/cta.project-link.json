@@ -1,0 +1,69 @@
+{
+ "id": "cta.project-link",
+ "title": "Project outbound link",
+ "version": "1.0.0",
+ "purpose": "Pill linking to the live project or broadcast, inked with the project accent.",
+ "semantic": {
+  "id": "cta.project-link",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:p[class=\"project-link\"]",
+  "file": ".recon/pages/works__billy.html",
+  "tag": "p",
+  "lines": "150",
+  "needle": "class=\"project-link\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentGrailleSurLeRail.jsx:267",
+   "needle": "project-link"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "link": {
+   "kind": "link",
+   "maxWords": 6,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "roll-ink"
+  ],
+  "default": "roll-ink"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": true
+ },
+ "responsive": {},
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "placeholder.url",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 47.6,
+   "max": 47.6,
+   "instances": 6,
+   "routes": 6
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

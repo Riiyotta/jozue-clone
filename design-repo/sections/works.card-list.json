@@ -1,0 +1,140 @@
+{
+ "id": "works.card-list",
+ "title": "Work card list",
+ "version": "1.0.0",
+ "purpose": "Vertical list of full-width work cards linking to case studies; hover grows the card and reveals the project photo. Mobile shows 9 then a 'load more' pill.",
+ "semantic": {
+  "id": "works.card-list",
+  "category": "INDEX"
+ },
+ "source": {
+  "id": "dom:section[class=\"js-works homepage__works-list\"]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "254",
+  "needle": "class=\"js-works homepage__works-list\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/WorksList.jsx:6",
+   "needle": "js-works homepage__works-list"
+  },
+  {
+   "cite": "src/components/WorksList.jsx:479",
+   "needle": "homepage__work-more"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "cards": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 24,
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "href": {
+     "kind": "href",
+     "required": true
+    },
+    "categories": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 4,
+     "maxWords": 3,
+     "required": true
+    },
+    "accent": {
+     "kind": "accentToken",
+     "required": true
+    },
+    "slogan": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 4,
+     "maxWords": 3,
+     "required": false
+    },
+    "media": {
+     "kind": "media",
+     "assetRoles": [
+      "work.card-media"
+     ],
+     "required": true
+    },
+    "heroMedia": {
+     "kind": "media",
+     "assetRoles": [
+      "work.hero-media"
+     ],
+     "required": false
+    }
+   },
+   "required": true
+  },
+  "loadMoreLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "mobileInitialCount": {
+   "kind": "integer",
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "card-grow",
+   "reveal-stagger",
+   "load-more-expand",
+   "shared-element-arrival"
+  ],
+  "default": "card-grow"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.cream"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": true
+ },
+ "responsive": {
+  "1440": "18 cards x 226px; load-more display:none (>=767px)",
+  "390": "cards full-bleed; 9 visible, rest inert height 0; load-more grows the page 7557 -> 9557"
+ },
+ "referenceAssetRoles": [
+  "work.card-media",
+  "work.hero-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual",
+  "original.copy"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 4068,
+   "max": 4068,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:168",
+   "needle": "| `.js-works` list | [0, 1243.1, 1440, 4068] = 18 × 226"
+  }
+ ]
+}

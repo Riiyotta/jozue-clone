@@ -1,0 +1,80 @@
+{
+ "id": "gallery.image-pair",
+ "title": "Image pair",
+ "version": "1.0.0",
+ "purpose": "Two images where one expands out of the frame (bigout) with a title.",
+ "semantic": {
+  "id": "gallery.image-pair",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-2-img-container js-2-img-container\"]",
+  "file": ".recon/pages/works__vianney.html",
+  "tag": "section",
+  "lines": "183",
+  "needle": "class=\"project-2-img-container js-2-img-container\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentVianney2.jsx:51",
+   "needle": "project-2-img-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "media": {
+   "kind": "mediaList",
+   "minItems": 2,
+   "maxItems": 2,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "scroll-parallax",
+   "lightbox"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 195.5,
+   "max": 368.5,
+   "instances": 4,
+   "routes": 4
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

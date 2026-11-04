@@ -1,0 +1,18 @@
+{
+ "id": "component.gallery-lightbox",
+ "title": "Gallery lightbox",
+ "purpose": "Gallery links open a JS lightbox (runtime UI, created on demand).",
+ "props": {
+  "items": "media-image[]"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/works__arte.html:116",
+   "needle": "class=\"project-3-img js-project-gallery project-3-img--duo\" data-no-swup"
+  }
+ ],
+ "motion": [
+  "lightbox"
+ ],
+ "retrievalEligible": false
+}

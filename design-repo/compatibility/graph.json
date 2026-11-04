@@ -1,0 +1,146 @@
+{
+ "version": "1.0.0",
+ "note": "Every rule here is implemented under the same id in schema/semantic_validate.py (RULES); verify_all.py fails if the two sets differ.",
+ "rules": [
+  {
+   "id": "ONE_HERO",
+   "severity": "error",
+   "rule": "Exactly one HERO-category node per page.",
+   "exceptions": [],
+   "evidence": "All three templates open with exactly one hero (home-intro, work-head, not-found)."
+  },
+  {
+   "id": "HERO_FIRST_CONTENT",
+   "severity": "error",
+   "rule": "The hero is the first non-SHELL/UTILITY node."
+  },
+  {
+   "id": "SHELL_BEFORE_CONTENT",
+   "severity": "error",
+   "rule": "SHELL nodes come before every content node (they are page chrome in DOM order)."
+  },
+  {
+   "id": "MUST_BE_LAST",
+   "severity": "error",
+   "rule": "A section with constraints.mustBeLast is the last node (contact.details on home)."
+  },
+  {
+   "id": "ONE_PER_PAGE",
+   "severity": "error",
+   "rule": "constraints.onePerPage / maxPerPage respected (keyed on section id)."
+  },
+  {
+   "id": "REQUIRES_SECTION",
+   "severity": "error",
+   "rule": "constraints.requires present on the page (filter island needs the work card list)."
+  },
+  {
+   "id": "TEMPLATE_ONLY",
+   "severity": "error",
+   "rule": "A section with constraints.templates appears only in those templates."
+  },
+  {
+   "id": "NO_ADJACENT_SAME_CATEGORY",
+   "severity": "warn",
+   "rule": "Two adjacent content nodes of the same category.",
+   "exceptions": [
+    {
+     "categories": [
+      "MEDIA",
+      "MEDIA"
+     ],
+     "why": "Case studies chain galleries back to back on 16/18 projects (e.g. arte: stills -> image-row -> large-image)."
+    },
+    {
+     "pair": [
+      "cta.got-project",
+      "cta.lets-talk"
+     ],
+     "why": "Real adjacency on every home and work page (got-project prompt directly above the let's talk band)."
+    },
+    {
+     "categories": [
+      "SHELL",
+      "SHELL"
+     ],
+     "why": "Chrome."
+    }
+   ]
+  },
+  {
+   "id": "NO_CONSECUTIVE_DUPLICATE",
+   "severity": "warn",
+   "rule": "The same (section, variant) twice in a row.",
+   "keyedOn": [
+    "section",
+    "variant"
+   ]
+  },
+  {
+   "id": "MORE_WORKS_THREE_CARDS",
+   "severity": "error",
+   "rule": "index.more-works holds exactly 3 cards (measured on all 36 work routes)."
+  },
+  {
+   "id": "MOTION_BUDGET",
+   "severity": "warn",
+   "rule": "At most 4 nodes whose chosen motion is an ambient loop (title-rotate, hint-breathe, word-cycle, marquee, signature-draw).",
+   "ambient": [
+    "title-rotate",
+    "hint-breathe",
+    "word-cycle",
+    "marquee",
+    "signature-draw"
+   ],
+   "max": 4
+  },
+  {
+   "id": "HOME_ROUTE_ONLY",
+   "severity": "error",
+   "rule": "In reference mode the home template is used only by / and /fr/."
+  },
+  {
+   "id": "RETRIEVAL_INELIGIBLE_SHELL_ONLY",
+   "severity": "error",
+   "rule": "Only SHELL/UTILITY sections may be retrievalEligible:false; a node's retrievalEligible (if given) must equal its contract."
+  }
+ ],
+ "adjacency": {
+  "home": {
+   "sequence": [
+    "shell.page-transition",
+    "shell.intro-preloader",
+    "shell.site-menu",
+    "hero.home-intro",
+    "works.selected-header",
+    "utility.filter-island",
+    "works.card-list",
+    "cta.got-project",
+    "cta.lets-talk",
+    "proof.awards",
+    "about.bio",
+    "proof.partners",
+    "contact.details"
+   ]
+  },
+  "work-detail": {
+   "sequence": [
+    "shell.page-transition",
+    "shell.site-menu",
+    "hero.work-head",
+    "media.work-hero-image",
+    "slot:case-study-body",
+    "credits.project-credits",
+    "index.more-works",
+    "cta.got-project",
+    "cta.lets-talk"
+   ]
+  },
+  "not-found": {
+   "sequence": [
+    "shell.page-transition",
+    "hero.not-found"
+   ]
+  }
+ }
+}

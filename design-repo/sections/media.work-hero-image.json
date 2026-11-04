@@ -1,0 +1,95 @@
+{
+ "id": "media.work-hero-image",
+ "title": "Work hero image",
+ "version": "1.0.0",
+ "purpose": "Large hero photograph under the head (full-bleed, clean, plain or drawn variant), with scroll parallax.",
+ "semantic": {
+  "id": "media.work-hero-image",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-hero-container project-hero-container--full\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "95",
+  "needle": "class=\"project-hero-container project-hero-container--full\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectHeroInstax.jsx:4",
+   "needle": "project-hero-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [
+  "full",
+  "clean",
+  "plain",
+  "drawn"
+ ],
+ "content": {
+  "variant": {
+   "kind": "enum",
+   "values": [
+    "full",
+    "clean",
+    "plain",
+    "drawn"
+   ],
+   "required": true
+  },
+  "media": {
+   "kind": "media",
+   "assetRoles": [
+    "work.hero-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-parallax",
+   "shared-element-arrival"
+  ],
+  "default": "scroll-parallax"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "760-955px depending on variant"
+ },
+ "referenceAssetRoles": [
+  "work.hero-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 752,
+   "max": 955,
+   "instances": 36,
+   "routes": 36
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:397",
+   "needle": "| `.project-hero-container--full` | [0, 568, 1440, 810]"
+  }
+ ]
+}

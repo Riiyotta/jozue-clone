@@ -1,0 +1,125 @@
+{
+ "id": "proof.awards",
+ "title": "Awards & archives",
+ "version": "1.0.0",
+ "purpose": "Recognition list: two-column award cards (context, project link, tags, recognitions); a 1-up slider on mobile.",
+ "semantic": {
+  "id": "proof.awards",
+  "category": "PROOF"
+ },
+ "source": {
+  "id": "dom:section[class=\"homepage__awards\" data-reveal-group]",
+  "file": ".recon/pages/index.html",
+  "tag": "section",
+  "lines": "422",
+  "needle": "class=\"homepage__awards\" data-reveal-group"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Awards.jsx:4",
+   "needle": "homepage__awards"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "awards": {
+   "kind": "items",
+   "minItems": 1,
+   "maxItems": 12,
+   "fields": {
+    "context": {
+     "kind": "text",
+     "maxWords": 8,
+     "required": true
+    },
+    "title": {
+     "kind": "text",
+     "maxWords": 6,
+     "required": true
+    },
+    "href": {
+     "kind": "href",
+     "required": false
+    },
+    "tags": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 4,
+     "maxWords": 3,
+     "required": true
+    },
+    "recognitions": {
+     "kind": "textList",
+     "minItems": 1,
+     "maxItems": 4,
+     "maxWords": 10,
+     "required": true
+    },
+    "recognitionSource": {
+     "kind": "enum",
+     "values": [
+      "real",
+      "placeholder"
+     ],
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-stagger",
+   "reveal-fade",
+   "slider-drag"
+  ],
+  "default": "reveal-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.paper"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "1602px, 2 columns",
+  "768": "1979px",
+  "390": "530px slider, 1 card per view"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "placeholder.award-label",
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 1602.2,
+   "max": 1602.2,
+   "instances": 2,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:175",
+   "needle": "| `.homepage__awards` (bg #f3f2f0)"
+  }
+ ]
+}

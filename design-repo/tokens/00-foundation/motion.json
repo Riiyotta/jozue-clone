@@ -1,0 +1,327 @@
+{
+ "category": "motion",
+ "tokens": {
+  "motion.dur.micro": {
+   "$type": "duration",
+   "$value": "160ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--dur-micro:160ms"
+    }
+   ]
+  },
+  "motion.dur.base": {
+   "$type": "duration",
+   "$value": "380ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--dur-base:380ms"
+    }
+   ]
+  },
+  "motion.dur.move": {
+   "$type": "duration",
+   "$value": "720ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--dur-move:720ms"
+    }
+   ]
+  },
+  "motion.dur.cine": {
+   "$type": "duration",
+   "$value": "1400ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--dur-cine:1400ms"
+    }
+   ]
+  },
+  "motion.ease.enter": {
+   "$type": "cubicBezier",
+   "$value": "cubic-bezier(0.22,0.61,0.36,1)",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--ease-enter:cubic-bezier(0.22,0.61,0.36,1)"
+    }
+   ]
+  },
+  "motion.ease.exit": {
+   "$type": "cubicBezier",
+   "$value": "cubic-bezier(0.4,0,1,1)",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--ease-exit:cubic-bezier(0.4,0,1,1)"
+    }
+   ]
+  },
+  "motion.ease.move": {
+   "$type": "cubicBezier",
+   "$value": "cubic-bezier(0.4,0,0.2,1)",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--ease-move:cubic-bezier(0.4,0,0.2,1)"
+    }
+   ]
+  },
+  "motion.ease.emphasis": {
+   "$type": "cubicBezier",
+   "$value": "cubic-bezier(0.2,0.8,0.2,1)",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--ease-emphasis:cubic-bezier(0.2,0.8,0.2,1)"
+    }
+   ]
+  },
+  "motion.ease.sweep": {
+   "$type": "easing",
+   "$value": "linear(0, 0.02 5%, 0.69 80%, 0.93 92%, 1)",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--ease-sweep:linear(0, 0.02 5%, 0.69 80%, 0.93 92%, 1)"
+    }
+   ]
+  },
+  "motion.ease.scroll": {
+   "$type": "easing",
+   "$value": "power3.inOut",
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "gsapScroll:`power3.inOut`"
+    }
+   ]
+  },
+  "motion.stagger.step": {
+   "$type": "duration",
+   "$value": "60ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--stagger-step:60ms"
+    }
+   ]
+  },
+  "motion.stagger.max": {
+   "$type": "duration",
+   "$value": "420ms",
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "stagger:{step:60,max:420}"
+    }
+   ]
+  },
+  "motion.reveal.distance": {
+   "$type": "dimension",
+   "$value": "24px",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--reveal-distance:24px"
+    }
+   ]
+  },
+  "motion.reveal.duration": {
+   "$type": "duration",
+   "$value": "480ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--reveal-duration:480ms"
+    }
+   ]
+  },
+  "motion.reveal.threshold": {
+   "$type": "number",
+   "$value": 0.15,
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "reveal:{distance:24,duration:480,threshold:.15}"
+    }
+   ]
+  },
+  "motion.panel.duration": {
+   "$type": "duration",
+   "$value": "720ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--panel-duration:720ms"
+    }
+   ]
+  },
+  "motion.cycle.duration": {
+   "$type": "duration",
+   "$value": "420ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--cycle-duration:420ms"
+    }
+   ]
+  },
+  "motion.cycle.interval": {
+   "$type": "duration",
+   "$value": "2400ms",
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "cycle:{interval:2400"
+    }
+   ]
+  },
+  "motion.magnet.duration": {
+   "$type": "duration",
+   "$value": "600ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--magnet-duration:600ms"
+    }
+   ]
+  },
+  "motion.magnet.amplitude": {
+   "$type": "number",
+   "$value": 0.06,
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "magnet:{amplitude:.06"
+    }
+   ]
+  },
+  "motion.roll.duration": {
+   "$type": "duration",
+   "$value": "420ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--roll-duration:420ms"
+    }
+   ]
+  },
+  "motion.roll.step": {
+   "$type": "duration",
+   "$value": "20ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--roll-step:20ms"
+    }
+   ]
+  },
+  "motion.roll.max": {
+   "$type": "duration",
+   "$value": "200ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--roll-max:200ms"
+    }
+   ]
+  },
+  "motion.underline.duration": {
+   "$type": "duration",
+   "$value": "380ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--underline-duration:380ms"
+    }
+   ]
+  },
+  "motion.hint.duration": {
+   "$type": "duration",
+   "$value": "1800ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--hint-duration:1800ms"
+    }
+   ]
+  },
+  "motion.scroll.duration": {
+   "$type": "duration",
+   "$value": "1200ms",
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "scroll:{duration:1200}"
+    }
+   ]
+  },
+  "motion.card.grow": {
+   "$type": "number",
+   "$value": 1.8,
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--card-grow:1.8"
+    }
+   ],
+   "measured": "226px -> 407px over 720ms at 1440"
+  },
+  "motion.card.grow-mobile": {
+   "$type": "number",
+   "$value": 1.4,
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--card-grow-mobile:1.4"
+    }
+   ]
+  },
+  "motion.title.hold": {
+   "$type": "duration",
+   "$value": "3500ms",
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "titleHold:3500"
+    }
+   ],
+   "measured": "rotation period ~5.23s (Playwright, live = clone)"
+  },
+  "motion.load-more.stagger": {
+   "$type": "duration",
+   "$value": "100ms",
+   "evidence": [
+    {
+     "cite": "public/_astro/motion.CqR23D0i.js:1",
+     "needle": "loadMore:{stagger:100}"
+    }
+   ]
+  },
+  "motion.lightbox.speed": {
+   "$type": "duration",
+   "$value": "500ms",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--lightbox-speed:500ms"
+    }
+   ]
+  },
+  "motion.lightbox.scale": {
+   "$type": "number",
+   "$value": 0.96,
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--lightbox-scale:0.96"
+    }
+   ]
+  }
+ }
+}

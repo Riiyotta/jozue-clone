@@ -1,0 +1,364 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "work-detail",
+ "route": "/works/arte/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Arte campaign concepts | Josué Pichot",
+  "description": "Posters and lines for arte.tv, Arte's free streaming platform, written and art-directed by Josué Pichot for a winning pitch with AustralieGAD."
+ },
+ "brand": {
+  "name": "Josué Pichot",
+  "domain": "jozue.fr"
+ },
+ "nodes": [
+  {
+   "section": "shell.page-transition",
+   "content": {},
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.site-menu",
+   "content": {
+    "links": [
+     {
+      "label": "About.",
+      "href": "/#about"
+     },
+     {
+      "label": "Works.",
+      "href": "/#works"
+     },
+     {
+      "label": "Contact.",
+      "href": "/#contact"
+     }
+    ],
+    "languageLinks": [
+     {
+      "label": "Français.",
+      "href": "/fr/works/arte/"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "panel-slide",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "hero.work-head",
+   "content": {
+    "backLink": {
+     "label": "Back to works",
+     "href": "/#works"
+    },
+    "name": "Arte",
+    "categories": [
+     "Art Direction",
+     "Campaign",
+     "Copywriting",
+     "Graphic design"
+    ],
+    "mission": "Posters and lines for arte.tv, Arte's free streaming platform, which I wrote and art-directed for a winning pitch with AustralieGAD.",
+    "slogan": [
+     "arte.tv",
+     "& chill"
+    ]
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.umber"
+   },
+   "motion": {
+    "pattern": "shared-element-arrival",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "media.work-hero-image",
+   "content": {
+    "variant": "full",
+    "media": {
+     "assetRole": "work.hero-media",
+     "ref": "/_astro/arte-hero-1.DiJqoqfB_1YzdRy.webp",
+     "alt": "Four typographic posters, PUTAIIIN, PSCHIIIT, WEEEEESCH and CHEEEEESE, pasted on a brick gable wall, Arte campaign"
+    }
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scroll-parallax",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "editorial.mission-text",
+   "content": {
+    "variant": "plain",
+    "text": "We had to make arte.tv a reflex. Each poster turns a programme into one drawn-out word, PUTAIIIN for \"H24\" or PSCHIIIT for \"Coca, leader pollueur\". A line below gives arte.tv's angle. I art-directed the posters and wrote the lines. We won the pitch, but the campaign never ran."
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "gallery.stills",
+   "content": {
+    "title": "One word per programme",
+    "media": [
+     {
+      "assetRole": "work.gallery-media",
+      "ref": "/_astro/arte-one-word-1.CdvpQsWr_Z6CaHG.webp",
+      "alt": "Yellow poster spelling PUTAIIIN in huge black letters, one word for the series H24 on women, Arte campaign"
+     },
+     {
+      "assetRole": "work.gallery-media",
+      "ref": "/_astro/arte-one-word-2.BP-60Xkh_AGwPp.webp",
+      "alt": "Orange-red poster spelling PSCHIIIT, one word for a documentary on Coca-Cola and pollution, Arte campaign"
+     },
+     {
+      "assetRole": "work.gallery-media",
+      "ref": "/_astro/arte-one-word-3.-BwhWWZZ_12umPr.webp",
+      "alt": "Salmon pink poster spelling WEEEEESCH in stretched black letters, one word for a hip hop show, Arte campaign"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "gallery.image-row",
+   "content": {
+    "variant": "duo",
+    "media": [
+     {
+      "assetRole": "work.gallery-media",
+      "ref": "/_astro/arte-one-word-4.BKoDJhY1_Z10WiBu.webp",
+      "alt": "Orange poster spelling CHEEEEESE in melting letters, one word for a documentary on Instagram, Arte campaign"
+     },
+     {
+      "assetRole": "work.gallery-media",
+      "ref": "/_astro/arte-one-word-5.C2yaYKkz_ZD5LOy.webp",
+      "alt": "Blue poster spelling SHIIIIT in cut-up black letters, one word for the podcast Le trafiquant, Arte campaign"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "media.large-image",
+   "content": {
+    "variant": "default",
+    "title": "On the wall",
+    "media": {
+     "assetRole": "work.gallery-media",
+     "ref": "/_astro/arte-on-the-wall-1.CtO8W3JO_Z86oup.webp",
+     "alt": "Photo versions of the posters on the same brick wall, the giant words laid over two portraits, a soda bottle and a burger, Arte campaign"
+    }
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "credits.project-credits",
+   "content": {
+    "title": "Credits",
+    "blocks": [
+     {
+      "title": "Agency",
+      "lines": [
+       "AustralieGAD"
+      ]
+     },
+     {
+      "title": "Role",
+      "lines": [
+       "Art director",
+       "Copywriter"
+      ]
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.umber"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "index.more-works",
+   "content": {
+    "title": "More works",
+    "cards": [
+     {
+      "title": "YouTube",
+      "href": "/works/youtube/",
+      "categories": [
+       "Copywriting",
+       "Campaign",
+       "Art Direction"
+      ],
+      "accent": "accent.signal-red",
+      "slogan": [
+       "just",
+       "do it",
+       "yourself"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/BEACON_HERVE_133_V2_epson-1-1.KHPp2VB6_Z2eXYal.webp",
+       "alt": "YouTube"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/BEACON_HERVE_133_V2_epson-1-1.KHPp2VB6_1GRlm0.webp",
+       "alt": "YouTube"
+      }
+     },
+     {
+      "title": "Graille sur le rail",
+      "href": "/works/graille-sur-le-rail/",
+      "categories": [
+       "Filmmaking",
+       "Art Direction",
+       "Photography",
+       "Graphic design"
+      ],
+      "accent": "accent.cobalt",
+      "slogan": [
+       "île",
+       "-de-",
+       "food"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/graille-sur-le-rail-hero-1.CcNlupbV_CmXo9.webp",
+       "alt": "Graille sur le rail"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/graille-sur-le-rail-hero-1.CcNlupbV_2p5tnX.webp",
+       "alt": "Graille sur le rail"
+      }
+     },
+     {
+      "title": "Mijote",
+      "href": "/works/mijote/",
+      "categories": [
+       "Branding",
+       "Copywriting",
+       "Graphic design"
+      ],
+      "accent": "accent.ash",
+      "slogan": [
+       "brothers",
+       "in",
+       "broth"
+      ],
+      "media": {
+       "assetRole": "work.card-media",
+       "ref": "/_astro/mijote-hero-1.ChxGQTe1_jxMKQ.webp",
+       "alt": "Mijote"
+      },
+      "heroMedia": {
+       "assetRole": "work.hero-media",
+       "ref": "/_astro/mijote-hero-1.ChxGQTe1_ZXEvfc.webp",
+       "alt": "Mijote"
+      }
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.umber"
+   },
+   "motion": {
+    "pattern": "card-grow",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "cta.got-project",
+   "content": {
+    "label": "Got a project?",
+    "target": "/#contact"
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.umber"
+   },
+   "motion": {
+    "pattern": "anchor-scroll",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "cta.lets-talk",
+   "content": {
+    "title": "let's talk",
+    "description": "I'm available for freelance work,",
+    "availability": "in-house or remote",
+    "link": {
+     "label": "Get in touch",
+     "href": "/#contact"
+    }
+   },
+   "tokens": {
+    "surface": "surface.accent",
+    "text": "text.on-dark",
+    "accent": "accent.umber"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  }
+ ]
+}

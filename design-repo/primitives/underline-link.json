@@ -1,0 +1,21 @@
+{
+ "id": "primitive.underline-link",
+ "title": "Underline link",
+ "purpose": "Text link with a 1px underline that grows left-to-right (hero nav, menu, address, socials).",
+ "props": {
+  "label": "text",
+  "href": "url|anchor"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:179",
+   "needle": "class=\"contact-link\" href=\"tel:+33661773220\" data-underline"
+  }
+ ],
+ "motion": [
+  "underline-grow"
+ ],
+ "tokens": [
+  "motion.underline.duration"
+ ]
+}

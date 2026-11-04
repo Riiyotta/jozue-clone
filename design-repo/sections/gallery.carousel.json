@@ -1,0 +1,82 @@
+{
+ "id": "gallery.carousel",
+ "title": "Media carousel",
+ "version": "1.0.0",
+ "purpose": "Horizontal slider of images and hosted videos, optionally titled.",
+ "semantic": {
+  "id": "gallery.carousel",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[project-carousel-container]",
+  "file": ".recon/pages/works__instax.html",
+  "tag": "section",
+  "lines": "100",
+  "needle": "project-carousel-container"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentInstax.jsx:10",
+   "needle": "project-carousel-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "media": {
+   "kind": "mediaList",
+   "minItems": 2,
+   "maxItems": 12,
+   "assetRoles": [
+    "work.gallery-media",
+    "work.video"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "slider-drag",
+   "reveal-up"
+  ],
+  "default": "slider-drag"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [
+  "work.gallery-media",
+  "work.video"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual",
+  "placeholder.project-video"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 234.3,
+   "max": 477.5,
+   "instances": 6,
+   "routes": 6
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

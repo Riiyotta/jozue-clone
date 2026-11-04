@@ -1,0 +1,64 @@
+{
+ "category": "layout",
+ "tokens": {
+  "layout.wrapper.max": {
+   "$value": "1399px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:153",
+     "needle": "| `.wrapper--infos` | [20.5, 0, 1399, 900]"
+    }
+   ]
+  },
+  "layout.wrapper.padding": {
+   "$value": "34px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:153",
+     "needle": "margin 0 20.5px, padding 0 34px"
+    }
+   ]
+  },
+  "layout.wrapper.margin-mobile": {
+   "$value": "38px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:185",
+     "needle": "| `.wrapper--infos` | [38, 0, 314, 844] (margin 0 38px)"
+    }
+   ]
+  },
+  "layout.section.full-viewport": {
+   "$value": "100vh",
+   "appliesTo": [
+    "hero.home-intro",
+    "contact.details",
+    "hero.not-found"
+   ],
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:152",
+     "needle": "[0, 0, 1440, 900] (height = 100vh)"
+    }
+   ]
+  },
+  "layout.work.hero-height": {
+   "$value": "810px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:397",
+     "needle": "| `.project-hero-container--full` | [0, 568, 1440, 810]"
+    }
+   ]
+  },
+  "layout.work.head-height": {
+   "$value": "568px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:392",
+     "needle": "| `.project-head` (bg #241f1a"
+    }
+   ]
+  }
+ }
+}

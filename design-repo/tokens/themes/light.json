@@ -1,0 +1,54 @@
+{
+ "theme": "light",
+ "note": "The only theme. Dark bands are surfaces inside this theme, not a dark mode; the source has no prefers-color-scheme rules.",
+ "resolves": {
+  "surface.page": {
+   "ref": "color.white",
+   "resolved": "#ffffff"
+  },
+  "surface.paper": {
+   "ref": "color.paper",
+   "resolved": "#f3f2f0"
+  },
+  "surface.cream": {
+   "ref": "color.cream",
+   "resolved": "#f7f2e7"
+  },
+  "surface.brand": {
+   "ref": "color.brand-red",
+   "resolved": "#f73326"
+  },
+  "surface.ink": {
+   "ref": "color.ink",
+   "resolved": "#111319"
+  },
+  "surface.accent": {
+   "ref": "accent.*",
+   "resolved": "per-node accent token"
+  },
+  "text.primary": {
+   "ref": "color.ink",
+   "resolved": "#111319"
+  },
+  "text.on-dark": {
+   "ref": "color.white",
+   "resolved": "#ffffff"
+  },
+  "text.muted-on-dark": {
+   "ref": "color.mist",
+   "resolved": "#dcdcd9"
+  },
+  "badge.count": {
+   "ref": "color.pastille-red",
+   "resolved": "#d12525"
+  },
+  "overlay.media-dim": {
+   "ref": "color.overlay-dim",
+   "resolved": "rgba(0,0,0,0.3)"
+  },
+  "stroke.signature": {
+   "ref": "color.signature",
+   "resolved": "#050507"
+  }
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "media.large-image",
+ "title": "Large image",
+ "version": "1.0.0",
+ "purpose": "Near full-width image with an optional title (default, clean, covered, tablet frame or typographic variants).",
+ "semantic": {
+  "id": "media.large-image",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-img-large\"]",
+  "file": ".recon/pages/works__arte.html",
+  "tag": "section",
+  "lines": "123",
+  "needle": "class=\"project-img-large\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentArte.jsx:53",
+   "needle": "project-img-large"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [
+  "default",
+  "clean",
+  "covered",
+  "tablet",
+  "typo"
+ ],
+ "content": {
+  "variant": {
+   "kind": "enum",
+   "values": [
+    "default",
+    "clean",
+    "covered",
+    "tablet",
+    "typo"
+   ],
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "media": {
+   "kind": "media",
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "reveal-up",
+   "scroll-parallax",
+   "lightbox"
+  ],
+  "default": "reveal-up"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {
+  "1440": "1395px wide, 653-1760px tall"
+ },
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 349.8,
+   "max": 1760.1,
+   "instances": 48,
+   "routes": 24
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:402",
+   "needle": "| \"On the wall\" large image"
+  }
+ ]
+}

@@ -1,0 +1,337 @@
+{
+ "version": "1.0.0",
+ "reducedMotion": {
+  "rule": "Under prefers-reduced-motion everything collapses to 150-200ms with no transforms; the intro preloader is skipped (mode none).",
+  "fallbacks": [
+   "instant-static",
+   "opacity-only-150ms",
+   "none"
+  ],
+  "evidence": [
+   {
+    "cite": "CLONE_SPEC.md:338",
+    "needle": "Under `prefers-reduced-motion`, everything collapses"
+   },
+   {
+    "cite": "CLONE_SPEC.md:18",
+    "needle": "`prefers-reduced-motion: reduce` sets mode `none`"
+   }
+  ]
+ },
+ "patterns": {
+  "reveal-up": {
+   "desc": "opacity 0 + translateY(24px) -> in, 480ms ease-enter, IntersectionObserver threshold .15",
+   "tokens": [
+    "motion.reveal.duration",
+    "motion.reveal.distance",
+    "motion.ease.enter"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:254",
+     "needle": "### 4.5 Scroll reveals"
+    }
+   ]
+  },
+  "reveal-stagger": {
+   "desc": "reveal-up inside a group, 60ms per item, capped at 420ms",
+   "tokens": [
+    "motion.stagger.step",
+    "motion.stagger.max"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:255",
+     "needle": "Inside `[data-reveal-group]` the delay staggers 60ms"
+    }
+   ]
+  },
+  "reveal-fade": {
+   "desc": "opacity-only reveal (data-reveal=fade)",
+   "tokens": [
+    "motion.reveal.duration"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:256",
+     "needle": "`=fade`: opacity only"
+    }
+   ]
+  },
+  "hero-entrance": {
+   "desc": "return-visit hero entrance: nav 0+70/step, hi 140+90/step, title letters 240 +18/letter (max 460), text 780, address 960, explore 1080",
+   "tokens": [
+    "motion.ease.enter"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:231",
+     "needle": "**Direct mode (return visit)**"
+    }
+   ]
+  },
+  "title-rotate": {
+   "desc": "3 title variants cycle; exit 380ms ease-exit (12ms/char), enter 720ms ease-enter (18ms/char), hold 3500ms; measured period ~5.23s",
+   "tokens": [
+    "motion.title.hold",
+    "motion.dur.move",
+    "motion.ease.exit"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:233",
+     "needle": "### 4.2 Hero title rotation"
+    }
+   ]
+  },
+  "mouse-depth": {
+   "desc": "pointer parallax: translate = -18px x depth x offset, lerp .08",
+   "tokens": [],
+   "reducedMotionFallback": "none",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:242",
+     "needle": "### 4.3 Mouse-depth parallax"
+    }
+   ]
+  },
+  "scroll-parallax": {
+   "desc": "data-parallax layers (back .25 ... lift 1.1), hero image max shift .05",
+   "tokens": [],
+   "reducedMotionFallback": "none",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:248",
+     "needle": "### 4.4 Scroll parallax"
+    }
+   ]
+  },
+  "hint-breathe": {
+   "desc": "red hint band breathes 1800ms ease-move x2 then sweeps (2200ms ease-sweep) and keeps breathing",
+   "tokens": [
+    "motion.hint.duration",
+    "motion.ease.sweep"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:313",
+     "needle": "`.hint-band` breathe: 1800ms ease-move"
+    }
+   ]
+  },
+  "word-cycle": {
+   "desc": "two slots cycle category words every 2400ms (right slot +1200ms); swap 420ms ease-enter",
+   "tokens": [
+    "motion.cycle.interval",
+    "motion.cycle.duration"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:296",
+     "needle": "Slots cycle every 2400ms"
+    }
+   ]
+  },
+  "clip-panel": {
+   "desc": "filter island opens with clip-path inset -> 0 round 28px, 720ms ease-move",
+   "tokens": [
+    "motion.panel.duration",
+    "motion.ease.move"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:293",
+     "needle": "`open`: clip animates to `inset(0 round 28px)`"
+    }
+   ]
+  },
+  "card-grow": {
+   "desc": "work card hover: height 226->407px 720ms ease-enter, media opacity 0->1 380ms, magnet scale 1.06->1.12 600ms",
+   "tokens": [
+    "motion.card.grow",
+    "motion.magnet.duration",
+    "motion.magnet.amplitude"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:266",
+     "needle": "- **Work card hover** (1440, Arte):"
+    }
+   ]
+  },
+  "load-more-expand": {
+   "desc": "mobile only (<767px): hidden cards expand 0->226px, 720ms ease-enter, 100ms stagger",
+   "tokens": [
+    "motion.load-more.stagger"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:307",
+     "needle": "### 4.9 Load more (mobile <767 only)"
+    }
+   ]
+  },
+  "underline-grow": {
+   "desc": "background-size 0% -> 100% 1px, 380ms ease-enter",
+   "tokens": [
+    "motion.underline.duration"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:260",
+     "needle": "- **`[data-underline]`**"
+    }
+   ]
+  },
+  "roll-ink": {
+   "desc": "pill text rolls char by char (420ms emphasis, 20ms/char max 200ms) and ink fills via clip-path 380ms",
+   "tokens": [
+    "motion.roll.duration",
+    "motion.roll.step",
+    "motion.roll.max"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:261",
+     "needle": "- **`[data-roll=\"ink\"]`** pills"
+    }
+   ]
+  },
+  "marquee": {
+   "desc": "skills list translate(-50%) linear infinite, 8s (horizontal on mobile, vertical column on desktop)",
+   "tokens": [],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:315",
+     "needle": "Marquee `.homepage__what-ul`"
+    }
+   ]
+  },
+  "signature-draw": {
+   "desc": "background signature/J strokes draw then erase in a loop (hold 1400, gap 700)",
+   "tokens": [],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:317",
+     "needle": "Signatures in `.homepage__talk` and `#about` J draw/erase"
+    }
+   ]
+  },
+  "panel-slide": {
+   "desc": "menu panel translateY(-100%)->0 720ms ease-move; links 720ms ease-enter at 324ms + 60ms each; close 720ms ease-exit",
+   "tokens": [
+    "motion.panel.duration",
+    "motion.ease.move"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:274",
+     "needle": "### 4.7 Menu open/close"
+    }
+   ]
+  },
+  "preloader-trace": {
+   "desc": "first visit only: loader J loop 917ms, signature draw 1222ms, wipe 778ms; html.is-intro removed ~2.7s after navigation start",
+   "tokens": [],
+   "reducedMotionFallback": "none",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:207",
+     "needle": "### 4.1 First-visit intro"
+    }
+   ]
+  },
+  "shared-element-arrival": {
+   "desc": "card -> work page: fixed photo clone expands (720ms ease-move), band to 50%, slogan words injected; work page ready after ~1.25s",
+   "tokens": [
+    "motion.dur.move",
+    "motion.ease.move"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:320",
+     "needle": "- **Home → work card (arrival)**"
+    }
+   ]
+  },
+  "return-fade": {
+   "desc": "work -> home: article fades + rises 24px (~420ms), home fades in",
+   "tokens": [
+    "motion.reveal.distance"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:327",
+     "needle": "- **Work → home (return)**"
+    }
+   ]
+  },
+  "anchor-scroll": {
+   "desc": "in-page anchors scroll with GSAP 1200ms power3.inOut",
+   "tokens": [
+    "motion.scroll.duration",
+    "motion.ease.scroll"
+   ],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:13",
+     "needle": "anchor scrolling is GSAP, 1200 ms"
+    }
+   ]
+  },
+  "slider-drag": {
+   "desc": "horizontal sliders (hero description on mobile, awards, partners): 200ms ease-out translate",
+   "tokens": [],
+   "reducedMotionFallback": "instant-static",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:336",
+     "needle": "use Siema. Inline style"
+    }
+   ]
+  },
+  "lightbox": {
+   "desc": "gallery lightbox track 500ms, scale .96",
+   "tokens": [
+    "motion.lightbox.speed",
+    "motion.lightbox.scale"
+   ],
+   "reducedMotionFallback": "opacity-only-150ms",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:337",
+     "needle": "Lightbox on project galleries: 500ms track"
+    }
+   ]
+  },
+  "none": {
+   "desc": "no motion",
+   "tokens": [],
+   "reducedMotionFallback": "none",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:338",
+     "needle": "Under `prefers-reduced-motion`, everything collapses"
+    }
+   ]
+  }
+ }
+}

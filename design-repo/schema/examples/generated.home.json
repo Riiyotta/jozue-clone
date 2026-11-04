@@ -1,0 +1,506 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "home",
+ "route": "/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Ilse Varga, illustrator and set designer",
+  "description": "Portfolio of Ilse Varga, an illustrator and set designer who builds small worlds for brands and theatres."
+ },
+ "brand": {
+  "name": "Ilse Varga",
+  "domain": "ilsevarga.example"
+ },
+ "nodes": [
+  {
+   "section": "shell.page-transition",
+   "content": {},
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.intro-preloader",
+   "content": {
+    "skipLabel": "Skip",
+    "greeting": "Hello"
+   },
+   "tokens": {
+    "surface": "surface.paper",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "preloader-trace",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.site-menu",
+   "content": {
+    "links": [
+     {
+      "label": "Studio.",
+      "href": "/#about"
+     },
+     {
+      "label": "Projects.",
+      "href": "/#works"
+     },
+     {
+      "label": "Write.",
+      "href": "/#contact"
+     }
+    ],
+    "languageLinks": [
+     {
+      "label": "Deutsch.",
+      "href": "/de/"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "panel-slide",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "hero.home-intro",
+   "content": {
+    "navLinks": [
+     {
+      "label": "Studio",
+      "href": "#about"
+     },
+     {
+      "label": "Projects",
+      "href": "#works"
+     },
+     {
+      "label": "Write",
+      "href": "#contact"
+     }
+    ],
+    "greeting": [
+     "Hello,",
+     "this is Ilse."
+    ],
+    "titleVariants": [
+     {
+      "line1": "illustrator",
+      "line2": "+ set designer"
+     },
+     {
+      "line1": "paper",
+      "line2": "+ light maker"
+     }
+    ],
+    "description": [
+     "I draw, cut and light small worlds for shop windows, book covers and stage sets.",
+     "Most projects start as a pencil sketch on the back of a train ticket."
+    ],
+    "addressLinks": [
+     {
+      "label": "Harbour Lane 4, Lakeside",
+      "href": "https://maps.example/harbour-lane-4"
+     },
+     {
+      "label": "+33 1 99 00 12 34",
+      "href": "tel:+33199001234"
+     },
+     {
+      "label": "studio@ilsevarga.example",
+      "href": "mailto:studio@ilsevarga.example"
+     }
+    ],
+    "scrollHint": "See the projects",
+    "backgroundMark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://ilse-varga/mark",
+     "alt": ""
+    }
+   },
+   "tokens": {
+    "surface": "surface.paper",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "hero-entrance",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "works.selected-header",
+   "content": {
+    "title": "recent projects",
+    "count": 4,
+    "filterSentence": "Pick a craft to narrow the list",
+    "categoriesLeft": [
+     {
+      "label": "Illustration",
+      "slug": "illustration",
+      "count": 1
+     },
+     {
+      "label": "Photography",
+      "slug": "photography",
+      "count": 1
+     }
+    ],
+    "categoriesRight": [
+     {
+      "label": "Packaging",
+      "slug": "packaging",
+      "count": 1
+     },
+     {
+      "label": "Websites",
+      "slug": "websites",
+      "count": 1
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.brand",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-up",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "utility.filter-island",
+   "content": {
+    "sentence": "Pick a craft to narrow the list",
+    "connector": "for",
+    "leftWords": [
+     "Illustration",
+     "Photography",
+     "Copywriting"
+    ],
+    "rightWords": [
+     "Packaging",
+     "Websites",
+     "Campaigns"
+    ],
+    "allLabel": "everything"
+   },
+   "tokens": {
+    "surface": "surface.brand",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "word-cycle",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "works.card-list",
+   "content": {
+    "cards": [
+     {
+      "title": "Tidewater",
+      "href": "/works/tidewater/",
+      "categories": [
+       "Branding",
+       "Photography"
+      ],
+      "accent": "accent.teal",
+      "slogan": [
+       "salt",
+       "and",
+       "signal"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://tidewater/card",
+       "alt": "Tidewater: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://tidewater/hero",
+       "alt": "Tidewater: generated hero visual"
+      }
+     },
+     {
+      "title": "Quiet Orchard",
+      "href": "/works/quiet-orchard/",
+      "categories": [
+       "Packaging",
+       "Illustration"
+      ],
+      "accent": "accent.ash",
+      "slogan": [
+       "picked",
+       "at",
+       "dawn"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://quiet-orchard/card",
+       "alt": "Quiet Orchard: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://quiet-orchard/hero",
+       "alt": "Quiet Orchard: generated hero visual"
+      }
+     },
+     {
+      "title": "North Platform",
+      "href": "/works/north-platform/",
+      "categories": [
+       "Websites",
+       "Product design"
+      ],
+      "accent": "accent.navy",
+      "slogan": [
+       "one",
+       "tap",
+       "home"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://north-platform/card",
+       "alt": "North Platform: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://north-platform/hero",
+       "alt": "North Platform: generated hero visual"
+      }
+     },
+     {
+      "title": "Paper Lantern",
+      "href": "/works/paper-lantern/",
+      "categories": [
+       "Campaigns",
+       "Copywriting"
+      ],
+      "accent": "accent.violet",
+      "slogan": [
+       "light",
+       "it",
+       "slowly"
+      ],
+      "media": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://paper-lantern/card",
+       "alt": "Paper Lantern: generated key visual"
+      },
+      "heroMedia": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://paper-lantern/hero",
+       "alt": "Paper Lantern: generated hero visual"
+      }
+     }
+    ],
+    "loadMoreLabel": "show the rest",
+    "mobileInitialCount": 3
+   },
+   "tokens": {
+    "surface": "surface.cream",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "card-grow",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "cta.got-project",
+   "content": {
+    "label": "Have an idea?",
+    "target": "#contact"
+   },
+   "tokens": {
+    "surface": "surface.cream",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "anchor-scroll",
+    "reducedMotionFallback": "instant-static"
+   }
+  },
+  {
+   "section": "cta.lets-talk",
+   "content": {
+    "title": "say hello",
+    "description": "Taking on two commissions this season,",
+    "availability": "studio or on site",
+    "link": {
+     "label": "Write to the studio",
+     "href": "#contact"
+    },
+    "backgroundMark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://ilse-varga/mark",
+     "alt": ""
+    }
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "proof.awards",
+   "content": {
+    "title": "Notes and mentions",
+    "awards": [
+     {
+      "context": "self-initiated series",
+      "title": "Winter Windows",
+      "href": "https://notes.example/winter-windows",
+      "tags": [
+       "Illustration"
+      ],
+      "recognitions": [
+       "Placeholder mention: replace with a real one"
+      ],
+      "recognitionSource": "placeholder"
+     },
+     {
+      "context": "client Lantern Theatre (fictional)",
+      "title": "The Glass Fox",
+      "tags": [
+       "Set design"
+      ],
+      "recognitions": [
+       "Placeholder mention: replace with a real one"
+      ],
+      "recognitionSource": "placeholder"
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.paper",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "about.bio",
+   "content": {
+    "label": "In short",
+    "heading": "the studio",
+    "skills": [
+     "Illustration",
+     "Set design",
+     "Paper craft",
+     "Lighting",
+     "Packaging"
+    ],
+    "paragraphs": [
+     "I grew up above a framing shop and learned to cut mats before I learned to ride a bike.",
+     "Today the studio is a long table, two lamps and a cutting plotter. Brands bring a product; I bring a small world for it to live in."
+    ],
+    "availability": "Booking spring projects now, studio or on site",
+    "link": {
+     "label": "Write to the studio",
+     "href": "#contact"
+    },
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://ilse-varga/mark-small",
+     "alt": ""
+    }
+   },
+   "tokens": {
+    "surface": "surface.brand",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "proof.partners",
+   "content": {
+    "title": "Frequent collaborators",
+    "partners": [
+     {
+      "name": "Moss & Kettle",
+      "role": "Photography studio",
+      "href": "https://mossandkettle.example",
+      "logo": {
+       "assetRole": "placeholder.partner-mark",
+       "ref": "placeholder://partner/mk",
+       "alt": "Moss & Kettle monogram"
+      }
+     },
+     {
+      "name": "Rune Albers",
+      "role": "Lighting designer",
+      "href": "https://runealbers.example",
+      "logo": {
+       "assetRole": "placeholder.partner-mark",
+       "ref": "placeholder://partner/ra",
+       "alt": "Rune Albers monogram"
+      }
+     }
+    ]
+   },
+   "tokens": {
+    "surface": "surface.cream",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  },
+  {
+   "section": "contact.details",
+   "content": {
+    "socials": [
+     {
+      "label": "sketchbook",
+      "href": "https://social.example/ilsevarga"
+     },
+     {
+      "label": "newsletter",
+      "href": "https://letters.example/ilse"
+     }
+    ],
+    "phone": "tel:+33199001234",
+    "email": {
+     "label": "studio@ilsevarga.example",
+     "href": "mailto:studio@ilsevarga.example"
+    },
+    "backgroundMark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://ilse-varga/mark",
+     "alt": ""
+    }
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "reveal-stagger",
+    "reducedMotionFallback": "opacity-only-150ms"
+   }
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "id": "gallery.triangle",
+ "title": "Triangle gallery",
+ "version": "1.0.0",
+ "purpose": "Three covers in a triangle (one hero, two lifted by parallax) on a paper backdrop, titled.",
+ "semantic": {
+  "id": "gallery.triangle",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section[class=\"project-triangle-container\"]",
+  "file": ".recon/pages/works__brico-depot.html",
+  "tag": "section",
+  "lines": "139",
+  "needle": "class=\"project-triangle-container\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/ProjectContentBricoDepot.jsx:115",
+   "needle": "project-triangle-container"
+  }
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "work-detail"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": false
+  },
+  "media": {
+   "kind": "mediaList",
+   "minItems": 3,
+   "maxItems": 3,
+   "assetRoles": [
+    "work.gallery-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-parallax",
+   "lightbox"
+  ],
+  "default": "scroll-parallax"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.paper",
+   "surface.page"
+  ],
+  "text": [
+   "text.primary"
+  ],
+  "accent": false
+ },
+ "responsive": {},
+ "referenceAssetRoles": [
+  "work.gallery-media"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual"
+ ],
+ "measured": {
+  "heightPx1440": {
+   "min": 1177.8,
+   "max": 1893.7,
+   "instances": 4,
+   "routes": 2
+  },
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "component.award-card",
+ "title": "Award card",
+ "purpose": "Context line, client/project link, category tags and a list of recognitions.",
+ "props": {
+  "context": "text",
+  "title": "text",
+  "href": "url",
+  "tags": "category-tag[]",
+  "recognitions": "text[]"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:426",
+   "needle": "class=\"js-slider-item homepage__award\""
+  },
+  {
+   "cite": "src/components/Awards.jsx:20",
+   "needle": "homepage__award-client"
+  }
+ ],
+ "motion": [
+  "reveal-fade"
+ ],
+ "tokens": [
+  "font.size.client-l"
+ ],
+ "composes": [
+  "primitive.category-tag"
+ ]
+}

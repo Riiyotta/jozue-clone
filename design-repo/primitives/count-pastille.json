@@ -1,0 +1,18 @@
+{
+ "id": "primitive.count-pastille",
+ "title": "Count pastille",
+ "purpose": "Red circular count badge (works count, per-category counts).",
+ "props": {
+  "count": "integer"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:217",
+   "needle": "button-selected-pastille--large-desktop"
+  }
+ ],
+ "tokens": [
+  "badge.count",
+  "radius.circle"
+ ]
+}

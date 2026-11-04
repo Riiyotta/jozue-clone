@@ -1,0 +1,28 @@
+{
+ "id": "primitive.pill-link",
+ "title": "Ink-roll pill link",
+ "purpose": "Outlined pill CTA whose label rolls and fills with ink on hover (Get in touch, contact email, load more, project link).",
+ "props": {
+  "label": "text<=6 words",
+  "href": "url|anchor",
+  "ink": "surface token"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:420",
+   "needle": "data-roll=\"ink\">Get in touch</a>"
+  },
+  {
+   "cite": "src/components/TalkCta.jsx:29",
+   "needle": "homepage__talk-link"
+  }
+ ],
+ "motion": [
+  "roll-ink"
+ ],
+ "tokens": [
+  "radius.pill",
+  "font.size.pill",
+  "motion.roll.duration"
+ ]
+}

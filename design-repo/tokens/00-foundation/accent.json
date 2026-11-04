@@ -1,0 +1,192 @@
+{
+ "category": "accent",
+ "tokens": {
+  "accent.violet": {
+   "$type": "color",
+   "$value": "#655bd5",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:255",
+     "needle": "data-color=\"#655bd5\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.night": {
+   "$type": "color",
+   "$value": "#07080c",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:263",
+     "needle": "data-color=\"#07080c\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.graphite": {
+   "$type": "color",
+   "$value": "#2c3138",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:271",
+     "needle": "data-color=\"#2c3138\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.cobalt": {
+   "$type": "color",
+   "$value": "#2e3ca8",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:279",
+     "needle": "data-color=\"#2e3ca8\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.ash": {
+   "$type": "color",
+   "$value": "#7a7b7b",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:287",
+     "needle": "data-color=\"#7a7b7b\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.slate-blue": {
+   "$type": "color",
+   "$value": "#2a3a4f",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:295",
+     "needle": "data-color=\"#2a3a4f\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.black": {
+   "$type": "color",
+   "$value": "#020101",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:303",
+     "needle": "data-color=\"#020101\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.umber": {
+   "$type": "color",
+   "$value": "#241f1a",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:311",
+     "needle": "data-color=\"#241f1a\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.petrol": {
+   "$type": "color",
+   "$value": "#005a7f",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:319",
+     "needle": "data-color=\"#005a7f\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.navy": {
+   "$type": "color",
+   "$value": "#173a5e",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:327",
+     "needle": "data-color=\"#173a5e\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.vermilion": {
+   "$type": "color",
+   "$value": "#dc2f24",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:335",
+     "needle": "data-color=\"#dc2f24\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.signal-red": {
+   "$type": "color",
+   "$value": "#ef2c20",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:343",
+     "needle": "data-color=\"#ef2c20\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.indigo": {
+   "$type": "color",
+   "$value": "#433774",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:351",
+     "needle": "data-color=\"#433774\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.teal": {
+   "$type": "color",
+   "$value": "#346b72",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:359",
+     "needle": "data-color=\"#346b72\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.abyss": {
+   "$type": "color",
+   "$value": "#00263b",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:367",
+     "needle": "data-color=\"#00263b\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.azure": {
+   "$type": "color",
+   "$value": "#009ce0",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:375",
+     "needle": "data-color=\"#009ce0\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  },
+  "accent.charcoal": {
+   "$type": "color",
+   "$value": "#2e2a2a",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:391",
+     "needle": "data-color=\"#2e2a2a\""
+    }
+   ],
+   "note": "Measured per-project data-color (card hover band, project head, credits, talk band). Named neutrally; it is a colour, not an identity."
+  }
+ }
+}

@@ -1,0 +1,265 @@
+{
+ "version": "1.0.0",
+ "note": "One template per page purpose. nodes are structured objects; a 'slot' node accepts a run of the listed sections in any order (case-study blocks vary per project). Route mapping lives in templates/routes.json (39 routes, each exactly once).",
+ "templates": {
+  "home": {
+   "purpose": "Portfolio home: introduce the person, index all selected works with filters, prove credibility (awards, partners), tell the story and convert to contact.",
+   "family": "home",
+   "evidence": [
+    {
+     "cite": "src/pages/PageHome.jsx:225",
+     "needle": "export default function PageHome"
+    },
+    {
+     "cite": ".recon/pages/index.html:140",
+     "needle": "<article id=\"js-home\" class=\"homepage\">"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "shell.page-transition",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "shell.intro-preloader",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "shell.site-menu",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "hero.home-intro",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "works.selected-header",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "utility.filter-island",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "works.card-list",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.got-project",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.lets-talk",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.awards",
+     "required": false,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "about.bio",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.partners",
+     "required": false,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "contact.details",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    }
+   ],
+   "routes": [
+    "/",
+    "/fr/"
+   ]
+  },
+  "work-detail": {
+   "purpose": "Case study: open on the project accent, show the hero image, tell the brief and show the work in a variable sequence of media/editorial blocks, credit the team, route to three more works and convert.",
+   "family": "work-detail",
+   "evidence": [
+    {
+     "cite": "src/pages/PageWorksArte.jsx:106",
+     "needle": "export default function PageWorksArte"
+    },
+    {
+     "cite": ".recon/pages/works__arte.html:70",
+     "needle": "<article id=\"js-project\" class=\"project js-project-simple\""
+    },
+    {
+     "cite": ".recon/pages/works__billy.html:70",
+     "needle": "class=\"project js-project-web\""
+    }
+   ],
+   "note": "Two DOM flavours (js-project-simple x14 projects, js-project-web x4: billy, fnac-darty, series-mania, vianney) share one purpose and normalise to this one template; the web flavour simply uses showcase.app-window inside the body slot.",
+   "nodes": [
+    {
+     "section": "shell.page-transition",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "shell.site-menu",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "hero.work-head",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "media.work-hero-image",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "slot": "case-study-body",
+     "allowed": [
+      "showcase.app-window",
+      "editorial.mission-text",
+      "gallery.stills",
+      "gallery.image-row",
+      "gallery.image-pair",
+      "gallery.triangle",
+      "media.large-image",
+      "media.reels",
+      "gallery.carousel",
+      "editorial.quote",
+      "brand.palette",
+      "gallery.cards",
+      "cta.project-link"
+     ],
+     "required": true,
+     "minItems": 1,
+     "maxItems": 30,
+     "repeatable": true,
+     "retrievalEligible": true
+    },
+    {
+     "section": "credits.project-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "index.more-works",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.got-project",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.lets-talk",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    }
+   ],
+   "routes": [
+    "/works/arte/",
+    "/fr/works/arte/",
+    "/works/athletic-brewing-company/",
+    "/fr/works/athletic-brewing-company/",
+    "/works/billy/",
+    "/fr/works/billy/",
+    "/works/brico-depot/",
+    "/fr/works/brico-depot/",
+    "/works/fnac-darty/",
+    "/fr/works/fnac-darty/",
+    "/works/graille-sur-le-rail/",
+    "/fr/works/graille-sur-le-rail/",
+    "/works/hoppy-road/",
+    "/fr/works/hoppy-road/",
+    "/works/instax/",
+    "/fr/works/instax/",
+    "/works/la-canute/",
+    "/fr/works/la-canute/",
+    "/works/le-monde-loreal/",
+    "/fr/works/le-monde-loreal/",
+    "/works/mc-cain/",
+    "/fr/works/mc-cain/",
+    "/works/mijote/",
+    "/fr/works/mijote/",
+    "/works/msa/",
+    "/fr/works/msa/",
+    "/works/nicolas-feuillatte/",
+    "/fr/works/nicolas-feuillatte/",
+    "/works/series-mania/",
+    "/fr/works/series-mania/",
+    "/works/vianney/",
+    "/fr/works/vianney/",
+    "/works/youtube-ads/",
+    "/fr/works/youtube-ads/",
+    "/works/youtube/",
+    "/fr/works/youtube/"
+   ]
+  },
+  "not-found": {
+   "purpose": "Recover a broken link: say it is gone and send the visitor home.",
+   "family": "not-found",
+   "evidence": [
+    {
+     "cite": "src/pages/Page404.jsx:10",
+     "needle": "export default function Page404"
+    },
+    {
+     "cite": ".recon/pages/404.html:54",
+     "needle": "homepage__talk--404"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "shell.page-transition",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "hero.not-found",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    }
+   ],
+   "routes": [
+    "/404/"
+   ]
+  }
+ }
+}

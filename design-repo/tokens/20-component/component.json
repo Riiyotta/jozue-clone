@@ -1,0 +1,84 @@
+{
+ "category": "component",
+ "tokens": {
+  "card.work.height": {
+   "$value": "226px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:169",
+     "needle": "| Work card `a.homepage__work`"
+    }
+   ]
+  },
+  "card.work.height-hover": {
+   "$value": "407px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:267",
+     "needle": "Card height **226 → 407px**"
+    }
+   ]
+  },
+  "pill.radius": {
+   "$value": "{radius.pill}"
+  },
+  "pill.padding": {
+   "$value": "3px 15px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:130",
+     "needle": "padding 3px 15px"
+    }
+   ]
+  },
+  "pastille.size-desktop": {
+   "$value": "65.3px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:123",
+     "needle": "65.3×65.3 circle"
+    }
+   ]
+  },
+  "island.bar-height": {
+   "$value": "56px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:166",
+     "needle": "Bar `.js-island-bar` 476.8×56"
+    }
+   ]
+  },
+  "island.radius": {
+   "$value": "{radius.island}"
+  },
+  "hint-band.height": {
+   "$value": "55px",
+   "grow": "8px",
+   "evidence": [
+    {
+     "cite": ".recon/pages/index.html:87",
+     "needle": "--hint-band:55px"
+    }
+   ]
+  },
+  "menu-toggle.size": {
+   "$value": "20x17px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:163",
+     "needle": "| `#js-menu-button` (fixed)"
+    }
+   ]
+  },
+  "partner.logo-size": {
+   "$value": "220px",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:177",
+     "needle": "logos 220×220"
+    }
+   ]
+  }
+ }
+}

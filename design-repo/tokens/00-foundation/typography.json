@@ -1,0 +1,302 @@
+{
+ "category": "typography",
+ "tokens": {
+  "font.family.display": {
+   "$type": "fontFamily",
+   "$value": "\"Neue Haas Grotesk Display\", \"Helvetica Neue\", Helvetica, Arial, system-ui, sans-serif",
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-family:Neue Haas Grotesk Display,Helvetica Neue"
+    },
+    {
+     "cite": "CLONE_SPEC.md:46",
+     "needle": "Only one family is loaded"
+    }
+   ],
+   "weights": [
+    400,
+    700
+   ],
+   "files": [
+    "/fonts/NHaasGroteskDSPro-55Rg.woff2",
+    "/fonts/NHaasGroteskDSPro-75Bd.woff2"
+   ],
+   "license": "Commercial typeface. A generated page must supply its own licence or render the fallback stack (see assets/asset-roles.json font.display-face)."
+  },
+  "font.family.ua-button": {
+   "$type": "fontFamily",
+   "$value": "Arial",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:52",
+     "needle": "**Quirk to preserve:**"
+    }
+   ],
+   "generationSelectable": false,
+   "note": "Computed on hero nav, filter and pastille buttons because <button> does not inherit font-family. A real trait of the source, recorded for fidelity; not selectable in a PageSpec."
+  },
+  "font.weight.regular": {
+   "$type": "fontWeight",
+   "$value": 400,
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-weight:400"
+    }
+   ]
+  },
+  "font.weight.bold": {
+   "$type": "fontWeight",
+   "$value": 700,
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-weight:700"
+    }
+   ],
+   "usageCount": 20
+  },
+  "font.size.display-xxl": {
+   "$type": "typeScale",
+   "$value": {
+    "desktop": "170px/125.8px/-5.1px/700",
+    "mobile": "67px/49.58px/-2.01px/700",
+    "rem": "17rem",
+    "lineHeight": 0.74,
+    "letterSpacing": "-0.03em"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:17rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:115",
+     "needle": "| Hero title `h1.homepage__main-title`"
+    }
+   ],
+   "roles": [
+    "hero title",
+    "selected works",
+    "let's talk",
+    "project slogan"
+   ]
+  },
+  "font.size.work-title": {
+   "$type": "typeScale",
+   "$value": {
+    "desktop": "101px/134.33px/normal/400",
+    "mobile": "50px/66.5px",
+    "rem": "10.1rem",
+    "lineHeight": 1.33
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:10.1rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:124",
+     "needle": "| Work title `.homepage__work-link`"
+    }
+   ]
+  },
+  "font.size.heading-l": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "42px/35.28px/-1.26px/700",
+    "rem": "4.2rem",
+    "lineHeight": 0.84
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:4.2rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:134",
+     "needle": "| About \"about me\""
+    }
+   ],
+   "roles": [
+    "about me",
+    "socials",
+    "project h1"
+   ]
+  },
+  "font.size.client-l": {
+   "$type": "typeScale",
+   "$value": {
+    "desktop": "42px/55.86px/normal/400",
+    "mobile": "34px/35.36px"
+   },
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:132",
+     "needle": "| Award client `.homepage__award-client`"
+    }
+   ]
+  },
+  "font.size.hi": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "35px/31.5px/-0.35px/700",
+    "rem": "3.5rem"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:3.5rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:117",
+     "needle": "| Hi text `.homepage__infos-hi`"
+    }
+   ]
+  },
+  "font.size.statement": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "34px/35.36px/normal/400",
+    "rem": "3.4rem",
+    "lineHeight": 1.04
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:3.4rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:137",
+     "needle": "| About \"available\""
+    }
+   ]
+  },
+  "font.size.body-l": {
+   "$type": "typeScale",
+   "$value": {
+    "desktop": "23px/28.06px/0.69px/400",
+    "mobile": "19px/24.7px/0.57px",
+    "rem": "2.3rem",
+    "lineHeight": 1.22,
+    "letterSpacing": "0.03em"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:2.3rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:136",
+     "needle": "| About body `.homepage__what-text p`"
+    }
+   ],
+   "usageCount": 10
+  },
+  "font.size.pill": {
+   "$type": "typeScale",
+   "$value": {
+    "desktop": "22px/26.84px/0.66px/400",
+    "mobile": "17px/20.74px/0.51px",
+    "rem": "2.2rem"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:2.2rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:130",
+     "needle": "| Pill links `.homepage__talk-link`"
+    }
+   ]
+  },
+  "font.size.body": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "17px/20.74px/0.51px/400",
+    "rem": "1.7rem"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:1.7rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:133",
+     "needle": "| Award list item"
+    }
+   ]
+  },
+  "font.size.base": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "16px/25.6px/normal/400",
+    "rem": "1.6rem",
+    "lineHeight": 1.6
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "line-height:1.6"
+    },
+    {
+     "cite": "CLONE_SPEC.md:50",
+     "needle": "`body` is 16px / 25.6px"
+    }
+   ]
+  },
+  "font.size.filter": {
+   "$type": "typeScale",
+   "$value": {
+    "mobile": "15px/18.3px/0.45px",
+    "rem": "1.5rem"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:1.5rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:127",
+     "needle": "| Filter buttons `.js-work-category`"
+    }
+   ]
+  },
+  "font.size.label": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "13px/15.86px/0.39px/700 uppercase",
+    "rem": "1.3rem"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:1.3rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:121",
+     "needle": "| Section labels `.h4`"
+    }
+   ]
+  },
+  "font.size.micro": {
+   "$type": "typeScale",
+   "$value": {
+    "all": "11px/17.6px/normal/400",
+    "rem": "1.1rem"
+   },
+   "evidence": [
+    {
+     "cite": "public/_astro/Base.Db0Vu-aS.css:1",
+     "needle": "font-size:1.1rem"
+    },
+    {
+     "cite": "CLONE_SPEC.md:125",
+     "needle": "| Work category pill"
+    }
+   ]
+  }
+ }
+}

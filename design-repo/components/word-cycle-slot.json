@@ -1,0 +1,18 @@
+{
+ "id": "component.word-cycle-slot",
+ "title": "Word cycle slot",
+ "purpose": "Slot cycling category words every 2400ms.",
+ "props": {
+  "words": "text[]",
+  "delay": "ms"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:223",
+   "needle": "class=\"filter-slot filter-island__slot js-island-slot\""
+  }
+ ],
+ "motion": [
+  "word-cycle"
+ ]
+}

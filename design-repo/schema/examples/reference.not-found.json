@@ -1,0 +1,49 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "not-found",
+ "route": "/404/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Page not found — Josué Pichot",
+  "description": "Not-found page of the source portfolio."
+ },
+ "brand": {
+  "name": "Josué Pichot",
+  "domain": "jozue.fr"
+ },
+ "nodes": [
+  {
+   "section": "shell.page-transition",
+   "content": {},
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.not-found",
+   "content": {
+    "title": "not found",
+    "description": "This page doesn't exist (anymore).",
+    "link": {
+     "label": "Back home",
+     "href": "/"
+    }
+   },
+   "tokens": {
+    "surface": "surface.ink",
+    "text": "text.on-dark"
+   },
+   "motion": {
+    "pattern": "roll-ink",
+    "reducedMotionFallback": "instant-static"
+   }
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "primitive.menu-toggle",
+ "title": "Menu toggle",
+ "purpose": "Fixed 20x17 three-bar button, right 38px (24px mobile); dark over light sections.",
+ "props": {
+  "accent": "surface token"
+ },
+ "evidence": [
+  {
+   "cite": ".recon/pages/index.html:123",
+   "needle": "id=\"js-menu-button\""
+  },
+  {
+   "cite": "src/components/MenuToggle.jsx:3",
+   "needle": "js-menu-button"
+  }
+ ],
+ "motion": [
+  "panel-slide"
+ ],
+ "tokens": [
+  "menu-toggle.size"
+ ]
+}
