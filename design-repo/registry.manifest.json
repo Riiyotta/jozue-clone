@@ -1,11 +1,13 @@
 {
  "repositoryId": "jozue-portfolio-design-repo",
- "repositoryVersion": "1.0.0",
+ "repositoryVersion": "1.1.0",
  "pageSpecVersion": "1.0.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion is machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version). pageSpecVersion is enforced by the schema (const). repositoryVersion is documentation-only and hand-maintained; nothing checks it.",
  "status": "design-review-pending",
  "productionApproved": false,
+ "category": "portfolio",
+ "productDomain": "art-direction-and-photography",
  "defaultTheme": "light",
  "schemaValidatedThemes": [
   "light"
@@ -48,7 +50,9 @@
   "parityCompare": "extraction/parity_compare.py",
   "parityResults": "extraction/parity-results.json",
   "generationGuide": "docs/generation-guide.md",
-  "sensitivity": "docs/sensitivity-and-licensing.md"
+  "sensitivity": "docs/sensitivity-and-licensing.md",
+  "designPolicy": "policy/design-policy.json",
+  "policyHash": "extraction/policy_hash.py"
  },
  "counts": {
   "tokens": 129,
@@ -67,5 +71,32 @@
   "generatedExamples": 3,
   "adversarialMutations": 91,
   "adversarialControls": 7
+ },
+ "designPolicy": {
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "category": "portfolio",
+  "domain": "art-direction-and-photography",
+  "contentHash": "sha256:7db84b7446acfe4164061e205fd1ea0a9e8622291e4a3b9efaa3146cc90e64ea",
+  "contentHashFiles": [
+   "tokens/llm/token-policy.json",
+   "compatibility/graph.json",
+   "schema/pagespec.schema.json",
+   "schema/semantic_validate.py"
+  ],
+  "contentHashMethod": "extraction/policy_hash.py: for each contentHashFiles entry in order append '<path>\\n<sha256 hex of bytes>\\n'; contentHash = 'sha256:' + sha256 hex of that text. Recomputed and compared by extraction/verify_all.py (design-policy check).",
+  "localExtension": {
+   "ref": "policy/design-policy.json",
+   "policyId": "portfolio-site-web",
+   "policyVersion": "1.0.0"
+  },
+  "decision": {
+   "policyDecision": "defined-pending-architecture-review",
+   "architectureDecisionRecorded": false,
+   "recordedIn": "policy/design-policy.json approval",
+   "note": "Category and classification are agent-derived; not an owner-ratified decision."
+  }
  }
 }

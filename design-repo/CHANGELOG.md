@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0 (2026-11-04): portfolio category and common-policy binding (Situation B)
+
+- `registry.manifest.json`: `category: "portfolio"` (and `productDomain: "art-direction-and-photography"`); new `designPolicy` block bound to `n0-design-constraints-common` 0.1.0 (Common IR 0.5, hard-and-soft, domain portfolio) with a `contentHash` over `tokens/llm/token-policy.json`, `compatibility/graph.json`, `schema/pagespec.schema.json` and `schema/semantic_validate.py`. `repositoryVersion` 1.0.0 to 1.1.0.
+- New `policy/design-policy.json` (`portfolio-site-web` 1.0.0, local extension): classification (portfolio), generation rules, enforcedBy, approval.
+- New `extraction/policy_hash.py` (`--check` default, `--write`). Both new files are manifest entryPoints (`designPolicy`, `policyHash`).
+- `verify_all.py`: new `DESIGN_POLICY` check (category, binding ids/versions, recomputed hash, policy file and enforcedBy files present, approval not overstated).
+- `prove_drift.py`: 9 new cases (hash drift after editing an enforcing file, tampered hash, category changed, category removed, binding removed, version drift, policy file missing, approval overstated as ratified, policy_hash unregistered); new `--scratch <empty dir>` option.
+- Counts recomputed (unchanged: no counted item changed).
+- Honest status: approval is **defined-pending-architecture-review**; the category and classification are agent-derived, not owner-confirmed. No IR file or IR schema was created or changed.
+
 ## 1.0.0 (2026-11-04): initial build (Situation A)
 
 Built from scratch against the jozue.fr clone in the parent folder and the pristine source pages in `.recon/pages/` (39 routes). Counts are in README.md (recomputed by `extraction/verify_all.py --write-counts`).

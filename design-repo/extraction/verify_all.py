@@ -8,6 +8,10 @@ Checks (each named in the output):
   JSON            every *.json parses
   MANIFEST        entryPoints exist and stay inside design-repo; counts recomputed from disk;
                   allowlistVersion == tokens/llm/component-allowlist.json version (machine-checked)
+  DESIGN_POLICY   category == portfolio; designPolicy bound to n0-design-constraints-common 0.1.0 (Common IR 0.5,
+                  hard-and-soft); contentHash recomputed over the enforcing files (extraction/policy_hash.py);
+                  policy/design-policy.json exists;
+                  approval stays pending
   README_COUNTS   README count block equals the recomputed counts (never hand-typed)
   ALLOWLIST       parity both ways: allowlist ids <-> contract files (sections/primitives/components)
   CONTRACTS       every section contract validates against schema/section-contract.schema.json
@@ -121,6 +125,60 @@ def walk_cites(o, where, out):
             walk_cites(v, where, out)
 
 
+BOUND_POLICY = {"policyId": "n0-design-constraints-common", "policyVersion": "0.1.0", "commonIrVersion": "0.5",
+                "enforcementMode": "hard-and-soft"}
+LOCAL_EXTENSION = {"ref": "policy/design-policy.json", "policyId": "portfolio-site-web", "policyVersion": "1.0.0"}
+
+
+def check_design_policy(man):
+    """Portfolio category + common-policy binding. Approval is pending: the check also fails if the files claim a
+    ratified decision, so the status cannot be overstated."""
+    ph = load_module("policy_hash", "extraction/policy_hash.py")
+    dp = man.get("designPolicy") or {}
+    errs = []
+    if man.get("category") != "portfolio":
+        errs.append(f"manifest category is {man.get('category')!r}, expected 'portfolio'")
+    if not dp:
+        errs.append("manifest has no designPolicy binding")
+    for k, v in BOUND_POLICY.items():
+        if dp.get(k) != v:
+            errs.append(f"designPolicy.{k} is {dp.get(k)!r}, expected {v!r}")
+    if dp.get("category") != "portfolio" or dp.get("domain") != "art-direction-and-photography" or man.get("productDomain") != dp.get("domain"):
+        errs.append("designPolicy category/domain must be portfolio / art-direction-and-photography and match the manifest")
+    ext = dp.get("localExtension") or {}
+    for k, v in LOCAL_EXTENSION.items():
+        if ext.get(k) != v:
+            errs.append(f"designPolicy.localExtension.{k} is {ext.get(k)!r}, expected {v!r}")
+    pol = {}
+    if not (ROOT / LOCAL_EXTENSION["ref"]).is_file():
+        errs.append("policy/design-policy.json does not exist")
+    else:
+        pol = j(LOCAL_EXTENSION["ref"])
+        cls = pol.get("classification") or {}
+        if pol.get("policyId") != LOCAL_EXTENSION["policyId"] or pol.get("policyVersion") != LOCAL_EXTENSION["policyVersion"]:
+            errs.append("policy file id/version disagree with designPolicy.localExtension")
+        if (pol.get("extends") or {}).get("policyId") != BOUND_POLICY["policyId"] or (pol.get("extends") or {}).get("policyVersion") != BOUND_POLICY["policyVersion"]:
+            errs.append("policy file must extend n0-design-constraints-common 0.1.0")
+        if cls.get("productCategory") != "portfolio" or cls.get("productDomain") != dp.get("domain"):
+            errs.append("policy classification must be portfolio with the manifest domain")
+        ap = pol.get("approval") or {}
+        if ap.get("policyDecision") != "defined-pending-architecture-review" or ap.get("architectureDecisionRecorded") is not False:
+            errs.append("policy approval must stay defined-pending-architecture-review / architectureDecisionRecorded false")
+        if (dp.get("decision") or {}).get("architectureDecisionRecorded") is not False:
+            errs.append("designPolicy.decision must not claim a recorded decision")
+        for rel in pol.get("enforcedBy", []):
+            if not (ROOT / rel).exists():
+                errs.append(f"policy enforcedBy {rel} missing")
+    if dp.get("contentHashFiles") != ph.POLICY_FILES:
+        errs.append("designPolicy.contentHashFiles != extraction/policy_hash.py POLICY_FILES")
+    want = ph.compute(ROOT)
+    if dp.get("contentHash") != want:
+        errs.append(f"designPolicy.contentHash {dp.get('contentHash')!r} != recomputed {want!r}")
+    for e in errs:
+        fail("DESIGN_POLICY", e)
+    PASSES.append("DESIGN_POLICY")
+
+
 def main(write_counts=False):
     # JSON
     docs = {}
@@ -142,7 +200,7 @@ def main(write_counts=False):
     for name, ep in man.get("entryPoints", {}).items():
         if ep.startswith("..") or ep.startswith("/") or not (ROOT / ep).exists():
             fail("MANIFEST", f"entryPoint {name} -> {ep} missing or outside design-repo")
-    for need in ("token-catalog", "token-policy", "component-allowlist", "motion-patterns", "asset-roles", "pagespec.schema", "section-contract.schema", "semantic_validate", "verify_all", "wrapper_gate", "measured-values"):
+    for need in ("token-catalog", "token-policy", "component-allowlist", "motion-patterns", "asset-roles", "pagespec.schema", "section-contract.schema", "semantic_validate", "verify_all", "wrapper_gate", "measured-values", "design-policy", "policy_hash"):
         if not any(need in ep for ep in man.get("entryPoints", {}).values()):
             fail("MANIFEST", f"{need} not registered in entryPoints")
     if man.get("counts") != counts:
@@ -152,6 +210,7 @@ def main(write_counts=False):
     if man.get("allowlistVersion") != al.get("version"):
         fail("MANIFEST", f"allowlistVersion {man.get('allowlistVersion')} != allowlist {al.get('version')}")
     PASSES.append("MANIFEST")
+    check_design_policy(man)
     # README counts
     rd = (ROOT / "README.md").read_text()
     if readme_block(counts) not in rd:

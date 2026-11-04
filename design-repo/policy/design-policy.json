@@ -1,0 +1,54 @@
+{
+  "policyId": "portfolio-site-web",
+  "policyVersion": "1.0.0",
+  "commonIrVersion": "0.5",
+  "role": "local-extension",
+  "extends": {
+    "policyId": "n0-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "note": "This file is a LOCAL EXTENSION layered on the common policy n0-design-constraints-common 0.1.0. It adds the portfolio rules below and does not replace the common policy. The binding itself lives in registry.manifest.json designPolicy."
+  },
+  "title": "Freelance art direction and photography portfolio web generation policy",
+  "classification": {
+    "productCategory": "portfolio",
+    "productDomain": "art-direction-and-photography",
+    "surfaces": [
+      "portfolio-home",
+      "case-study-pages",
+      "about-section",
+      "contact-section",
+      "not-found"
+    ],
+    "audiences": [
+      "prospective-clients",
+      "agencies-and-studios",
+      "collaborators"
+    ],
+    "derivation": "Agent-derived from the clone (home, about, works index, 36 case-study pages, awards, partners, contact, 404). Not confirmed by the site owner."
+  },
+  "generationRules": [
+    "Pages are drawn only from the 3 templates (home, work-detail, not-found) and the section contracts; no pricing-table, feature-matrix, integrations, dashboard or demo-booking sections, because the source has none.",
+    "Work (project / case-study), about and contact structures are first class: a home page indexes works, introduces the person and ends in contact; a work page is a case study with credits and related works.",
+    "Every PageSpec declares mode: reference (faithful reconstruction of the source) or generated (a new portfolio for someone else). Generated pages carry no source name, brand, contact details, clients, partners, awards, copy, URLs or media (GENERATED_MODE_* rules).",
+    "Page-level tokens come only from tokens/llm/token-catalog.json under tokens/llm/token-policy.json; no raw colours, lengths or font names (TOKEN_* rules).",
+    "Real client names, partner and award marks, the personal identity (name, wordmark, signature, bio) and photography/work imagery are must-not-fabricate in generation mode: use the generation-safe substitute roles in assets/asset-roles.json or operator-supplied content.",
+    "Conversion is a contact invitation (got-a-project, get in touch), never a pricing or demo flow."
+  ],
+  "enforcedBy": [
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py",
+    "compatibility/graph.json",
+    "tokens/llm/token-policy.json",
+    "assets/asset-roles.json",
+    "schema/protected-content.json",
+    "docs/sensitivity-and-licensing.md"
+  ],
+  "approval": {
+    "policyDecision": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "decidedBy": null,
+    "decision": "Proposed: bind to the common policy n0-design-constraints-common 0.1.0 (Common IR 0.5, hard-and-soft) with this file as a local extension. The category label (portfolio) and this classification were derived by the extraction agent and are not an owner-ratified architecture decision.",
+    "scope": "Policy binding only. Legal-content sign-off and asset-licensing review are separate approvals and remain open."
+  }
+}

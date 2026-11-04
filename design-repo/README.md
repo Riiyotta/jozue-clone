@@ -40,8 +40,17 @@ A machine-validated PageSpec system extracted from the jozue.fr clone in the par
 | `compatibility/graph.json` | rhythm and position rules with severities; same ids as the validator's `RULES` |
 | `schema/` | `pagespec.schema.json`, `section-contract.schema.json`, `semantic_validate.py`, `protected-content.json`, `example.pagespec.json` (reference home) and `examples/` |
 | `assets/asset-roles.json` | closed asset roles with three-way availability, generation policy and generation-safe substitutes |
-| `extraction/` | `measured-values.json` (citation ledger, section heights for every route at 1440, QA values), `verify_all.py`, `wrapper_gate.py`, `prove_drift.py`, `measure_sections.mjs`, `parity_capture.mjs` + `parity_compare.py` + `parity-results.json` |
+| `extraction/` | `measured-values.json` (citation ledger, section heights for every route at 1440, QA values), `verify_all.py`, `policy_hash.py`, `wrapper_gate.py`, `prove_drift.py`, `measure_sections.mjs`, `parity_capture.mjs` + `parity_compare.py` + `parity-results.json` |
+| `policy/` | `design-policy.json`: the portfolio design policy (local extension of the bound common policy) |
 | `docs/` | generation guide, sensitivity and licensing |
+
+## Category and design policy
+
+This repo is a **portfolio** (`category: "portfolio"`, domain art direction and photography), and `registry.manifest.json` `designPolicy` binds it to the generic common policy `n0-design-constraints-common` 0.1.0 (Common IR 0.5, hard-and-soft). The site has no pricing tiers, feature matrices, integrations, dashboards or demo booking, and a generator must not add them. `policy/design-policy.json` (`portfolio-site-web` 1.0.0) is the local extension: work / case-study, about and contact structures are first class, and real client names, partner and award marks, personal identity and photography are must-not-fabricate in generated mode.
+
+`designPolicy.contentHash` covers the files that enforce the policy (`tokens/llm/token-policy.json`, `compatibility/graph.json`, `schema/pagespec.schema.json`, `schema/semantic_validate.py`). After editing any of them run `python3 extraction/policy_hash.py --write`; `verify_all.py` (check `DESIGN_POLICY`) recomputes it and fails on drift.
+
+Status, stated honestly: the policy is **defined, pending architecture review**. The category label and the policy classification (surfaces, audiences) were derived by the extraction agent from the clone; no owner decision is recorded (`architectureDecisionRecorded: false`). Legal and asset-licensing review are separate and still open.
 
 ## Modes
 

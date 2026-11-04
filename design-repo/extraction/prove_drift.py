@@ -3,7 +3,7 @@
 directory, inject one defect, run verify_all.py there and require exit 1 plus the expected check name.
 The untouched copy must pass (control).
 
-    python3 extraction/prove_drift.py
+    python3 extraction/prove_drift.py [--scratch <empty dir>]
 
 When the source evidence tree (.recon/, src/, public/, CLONE_SPEC.md next to design-repo/) is present,
 it is linked read-only into the temp project so the citation / source-tag cases run; otherwise those
@@ -85,12 +85,24 @@ CASES = [
     ("measured heights removed", jedit("extraction/measured-values.json", lambda d: d.pop("sectionHeights")), "WRAPPER_GATE", False),
     ("gate thresholds loosened in JSON", jedit("extraction/measured-values.json", lambda d: d.update(thresholds={"heroWarnPx": 9000, "heroErrorPx": 9999, "shareWarn": 0.9, "shareError": 0.99})), "WRAPPER_GATE", False),
     ("example drifts from its template", jedit("schema/examples/generated.home.json", lambda d: d["nodes"].pop(4)), "EXAMPLES", False),
+    ("enforcing file edited without refreshing the policy hash", lambda r: (r / "schema/semantic_validate.py").open("a").write("\n# drift\n"), "DESIGN_POLICY", False),
+    ("contentHash tampered", jedit("registry.manifest.json", lambda d: d["designPolicy"].update(contentHash="sha256:" + "0" * 64)), "DESIGN_POLICY", False),
+    ("category changed away from portfolio", jedit("registry.manifest.json", lambda d: d.update(category="marketplace")), "DESIGN_POLICY", False),
+    ("category removed", jedit("registry.manifest.json", lambda d: d.pop("category")), "DESIGN_POLICY", False),
+    ("designPolicy binding removed", jedit("registry.manifest.json", lambda d: d.pop("designPolicy")), "DESIGN_POLICY", False),
+    ("bound policy version drift", jedit("registry.manifest.json", lambda d: d["designPolicy"].update(policyVersion="0.2.0")), "DESIGN_POLICY", False),
+    ("policy file missing", lambda r: (r / "policy/design-policy.json").unlink(), "DESIGN_POLICY", False),
+    ("approval overstated as ratified", jedit("policy/design-policy.json", lambda d: d["approval"].update(policyDecision="ratified", architectureDecisionRecorded=True)), "DESIGN_POLICY", False),
+    ("policy_hash script unregistered", jedit("registry.manifest.json", lambda d: d["entryPoints"].pop("policyHash")), "MANIFEST", False),
     ("absolute machine path", tedit("README.md", "# ", "# " + "/" + "Users/someone/project ", 1), "HYGIENE", False),
 ]
 
 
+SCRATCH = None  # --scratch <dir>: an empty or absent directory to hold the throwaway copies
+
+
 def make_copy():
-    tmp = Path(tempfile.mkdtemp(prefix="drift-"))
+    tmp = Path(tempfile.mkdtemp(prefix="drift-", dir=SCRATCH))
     proj = tmp / "project"; proj.mkdir()
     shutil.copytree(ROOT, proj / "design-repo", ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     if HAS_SOURCE:
@@ -105,6 +117,12 @@ def run_verify(repo):
 
 
 def main():
+    global SCRATCH
+    if "--scratch" in sys.argv:
+        SCRATCH = Path(sys.argv[sys.argv.index("--scratch") + 1])
+        if SCRATCH.exists() and any(SCRATCH.iterdir()):
+            sys.exit("--scratch directory must be empty")
+        SCRATCH.mkdir(parents=True, exist_ok=True)
     tmp, repo = make_copy()
     code, out = run_verify(repo); shutil.rmtree(tmp)
     print(f"{'PASS' if code == 0 else 'FAIL'}  control: untouched copy passes verify_all (exit {code}); source tree {'linked' if HAS_SOURCE else 'absent'}")
