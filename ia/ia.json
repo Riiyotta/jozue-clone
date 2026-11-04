@@ -1,0 +1,473 @@
+{
+  "$comment": "Derived from the pristine server HTML of every route (.recon/pages/*.html, fetched from https://jozue.fr) and the clone's React components (src/components, src/pages). EN and FR routes share identical structure (same class inventory), so each pair maps to one template. presentOn lists EN slugs; the FR route of each slug has the same blocks.",
+  "meta": {
+    "source": "https://jozue.fr (clone at portfolio/jozue)",
+    "status": "measured-from-mirror",
+    "totalRoutes": 39,
+    "totalTemplates": 4
+  },
+  "categories": {
+    "SHELL": "Persistent chrome present across routes: transition layer, menu toggle, menu overlay.",
+    "RUNTIME": "Utility/runtime UI that is not page content (preloader).",
+    "HERO": "Page-opening composition.",
+    "WORKS": "Portfolio index and navigation between projects.",
+    "CASE": "Body blocks of a work case study.",
+    "PROOF": "Credibility: awards and partner studios.",
+    "ABOUT": "Who the person is and what they do.",
+    "CONVERSION": "Contact prompts and contact details.",
+    "STATUS": "System status pages."
+  },
+  "sections": {
+    "shell.page-transition-layer": {
+      "category": "SHELL",
+      "description": "Empty full-screen transition layer (#js-transi) with a title slot. It is in the DOM on every page but never animates: the real page transitions are swup-driven (a shared-element photo expansion from a work card to the work page, and a fade/slide back home).",
+      "scope": "Every route.",
+      "implementedBy": "Transition.jsx"
+    },
+    "shell.menu-toggle": {
+      "category": "SHELL",
+      "description": "Fixed three-bar burger button, top right. Its colour follows the section underneath (data-nav-dark) and it morphs into a close icon while the menu is open.",
+      "scope": "Every route except the not-found page.",
+      "implementedBy": "MenuToggle.jsx / MenuToggleVariant1.jsx"
+    },
+    "shell.menu-overlay": {
+      "category": "SHELL",
+      "description": "Full-screen dark menu panel that drops from the top. Three large links (About, Works, Contact) arrive with a staggered entrance, plus the EN/FR language switch.",
+      "scope": "Every route except the not-found page.",
+      "implementedBy": "Menu.jsx / MenuFr.jsx / MenuVariant*.jsx"
+    },
+    "runtime.intro-preloader": {
+      "category": "RUNTIME",
+      "description": "First-visit preloader: the handwritten 'J' signature is traced stroke by stroke, then a stage panel says hi and slides out. It has a skip button and is remembered in localStorage for a month, after which the page loads directly. Utility UI, not page content.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "IntroOverlay.jsx + IntroKeyframes.jsx + TraceJ.jsx (signature path data)"
+    },
+    "hero.home-intro": {
+      "category": "HERO",
+      "description": "Home opening screen. Contains in-page nav buttons (About / Works / Contact), the 'Hi, I am …' greeting, a giant rotating role title (three variants, letter-staggered), a two-slide bio slider, the address / phone / email column, a mouse-driven depth-parallax 'J' mark, and the red 'Explore my work' hint band.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "Hero.jsx / HeroFr.jsx"
+    },
+    "works.selected-heading": {
+      "category": "WORKS",
+      "description": "Large 'selected works' title that opens the portfolio index.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "SelectedWorks.jsx / SelectedWorksFr.jsx"
+    },
+    "works.filter-island": {
+      "category": "WORKS",
+      "description": "Floating pill-shaped filter bar (bottom centre) with cycling category words and a live work count. It opens into a clip-path panel of category filters; the chosen filter persists in sessionStorage. Includes a screen-reader live region announcing results.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "FilterIsland.jsx + FilterLive.jsx"
+    },
+    "works.index-list": {
+      "category": "WORKS",
+      "description": "Full list of the 18 work cards: a giant title with category pastilles; on hover the card grows from 226 to 407px and reveals a zooming cover photo. Below 767px, half the cards hide behind a load-more button. Ends with the small 'Got a project?' prompt.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "WorksList.jsx"
+    },
+    "works.more-works": {
+      "category": "WORKS",
+      "description": "'More works' heading followed by the cards of the other projects (same card design as the home index, without filtering), ending with the 'Got a project?' prompt.",
+      "scope": "Every work page, editorial and app case studies alike.",
+      "implementedBy": "MoreWorksTitle.jsx + WorksList<Project>.jsx / WorksListVariant*.jsx"
+    },
+    "cta.lets-talk": {
+      "category": "CONVERSION",
+      "description": "'let's talk' band: large title, a freelance-availability line and a 'Get in touch' link to the contact block / mailto.",
+      "scope": "The home routes and every work page; not the not-found page.",
+      "implementedBy": "TalkCta.jsx / TalkCtaVariant1.jsx"
+    },
+    "cta.contact-footer": {
+      "category": "CONVERSION",
+      "description": "Closing contact screen: the full 'jozue' wordmark with soft parallax, social links (instagram, bluesky, linkedin), phone number and a large ink-roll mailto link.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "Contact.jsx"
+    },
+    "proof.awards": {
+      "category": "PROOF",
+      "description": "'Awards & Archives' horizontal scroller of past projects. Each entry gives the project, client/agency, disciplines and award (FWA, Awwwards, CSSDA) and links out to the award page.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "Awards.jsx"
+    },
+    "about.what-i-do": {
+      "category": "ABOUT",
+      "description": "'Few words about me' section: a looping marquee of disciplines (Graphic Design, Art Direction, Copywriting, Visual Identity, Digital Design, Photography, Filmmaking & more), the bio paragraph and the small 'J' mark.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "About.jsx"
+    },
+    "proof.partners": {
+      "category": "PROOF",
+      "description": "'Partners in crime' horizontal scroller of partner studios / freelancers: logo, role and outbound link. Logos lazy-load on approach.",
+      "scope": "Both home routes (EN and FR) only.",
+      "implementedBy": "Partners.jsx"
+    },
+    "hero.project-head": {
+      "category": "HERO",
+      "description": "Work-page opening header: small 'jozue' logo, back link, meta columns (client, year, disciplines) and the project claim / slogan.",
+      "scope": "Every work page.",
+      "implementedBy": "ProjectHead*.jsx (per-project variants)"
+    },
+    "hero.project-cover": {
+      "category": "HERO",
+      "description": "Full-bleed cover image of the project. It is the landing target of the card-to-page shared-element transition.",
+      "scope": "Every work page.",
+      "implementedBy": "ProjectHero*.jsx"
+    },
+    "case.mission": {
+      "category": "CASE",
+      "description": "Paragraph block with the project's mission / context statement. It can recur later in the page as an interstitial text block.",
+      "scope": "Every work page except fnac-darty.",
+      "implementedBy": "ProjectMissionBis.jsx / inside ProjectContent*.jsx",
+      "presentOn": "all except fnac-darty"
+    },
+    "case.stills": {
+      "category": "CASE",
+      "description": "Row of stills / photos (photography outtakes, frames) laid out as a horizontal strip.",
+      "scope": "Editorial case studies only.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "arte",
+        "athletic-brewing-company",
+        "graille-sur-le-rail",
+        "hoppy-road",
+        "instax",
+        "la-canute",
+        "le-monde-loreal",
+        "mc-cain",
+        "mijote",
+        "msa",
+        "nicolas-feuillatte",
+        "youtube"
+      ]
+    },
+    "case.gallery-3": {
+      "category": "CASE",
+      "description": "Three-image gallery (or a duo variant) that opens in a lightbox.",
+      "scope": "Editorial case studies only.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "arte",
+        "athletic-brewing-company",
+        "graille-sur-le-rail",
+        "hoppy-road",
+        "la-canute",
+        "le-monde-loreal",
+        "mc-cain",
+        "msa",
+        "nicolas-feuillatte",
+        "youtube-ads"
+      ]
+    },
+    "case.block-title": {
+      "category": "CASE",
+      "description": "Small bold uppercase heading that introduces the next body block (e.g. a large image or a reel).",
+      "scope": "Editorial case studies only.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "arte",
+        "brico-depot",
+        "graille-sur-le-rail",
+        "hoppy-road",
+        "la-canute",
+        "le-monde-loreal",
+        "mc-cain",
+        "mijote",
+        "youtube-ads",
+        "youtube"
+      ]
+    },
+    "case.image-large": {
+      "category": "CASE",
+      "description": "Single full-width large image (key visual, poster, campaign shot).",
+      "scope": "Both work templates.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "arte",
+        "brico-depot",
+        "graille-sur-le-rail",
+        "la-canute",
+        "le-monde-loreal",
+        "mc-cain",
+        "mijote",
+        "youtube-ads",
+        "billy",
+        "vianney",
+        "fnac-darty (inside app frame)",
+        "series-mania (inside app frame)"
+      ]
+    },
+    "case.quote-image": {
+      "category": "CASE",
+      "description": "Quote or statement paired with an image, side by side.",
+      "scope": "Both work templates.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "athletic-brewing-company",
+        "brico-depot",
+        "graille-sur-le-rail",
+        "hoppy-road",
+        "le-monde-loreal",
+        "mc-cain",
+        "msa",
+        "nicolas-feuillatte",
+        "youtube",
+        "vianney"
+      ]
+    },
+    "case.carousel": {
+      "category": "CASE",
+      "description": "Horizontal slider of media items. It includes click-to-play self-hosted videos (lazyframe items with a play button) and images.",
+      "scope": "Editorial case studies only.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "instax",
+        "youtube-ads",
+        "youtube"
+      ]
+    },
+    "case.reels": {
+      "category": "CASE",
+      "description": "Vertical video reels (self-hosted mp4, preload none) with captions, for social-first films.",
+      "scope": "Editorial case studies only.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "graille-sur-le-rail",
+        "mc-cain"
+      ]
+    },
+    "case.palette": {
+      "category": "CASE",
+      "description": "Brand colour palette: swatches with their colour codes. On app case studies it sits inside the app frame.",
+      "scope": "Editorial case studies (also nested in the app frame of two app case studies).",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "brico-depot",
+        "mijote",
+        "fnac-darty (inside app frame)",
+        "series-mania (inside app frame)"
+      ]
+    },
+    "case.triangle-composition": {
+      "category": "CASE",
+      "description": "Bespoke triangle image composition (one oversized bleed image plus a triangle arrangement).",
+      "scope": "Editorial case studies only.",
+      "implementedBy": "inside ProjectContentBricoDepot*.jsx",
+      "presentOn": [
+        "brico-depot"
+      ]
+    },
+    "case.two-image-bleed": {
+      "category": "CASE",
+      "description": "Two-image block where one image bleeds out of the grid.",
+      "scope": "Both work templates.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "youtube",
+        "vianney"
+      ]
+    },
+    "case.external-link": {
+      "category": "CASE",
+      "description": "Outbound link to the live project / campaign site.",
+      "scope": "Both work templates.",
+      "implementedBy": "inside ProjectContent*.jsx",
+      "presentOn": [
+        "graille-sur-le-rail",
+        "billy",
+        "vianney"
+      ]
+    },
+    "case.app-frame": {
+      "category": "CASE",
+      "description": "Browser/app window mockup (title bar with three bullets and a close control) that frames scrolling product screens. This is the signature block of the app/product case studies.",
+      "scope": "App case studies only.",
+      "implementedBy": "ProjectContentVariant1.jsx / ProjectContent<Project>*.jsx",
+      "presentOn": [
+        "billy",
+        "fnac-darty",
+        "series-mania",
+        "vianney"
+      ]
+    },
+    "case.app-next": {
+      "category": "CASE",
+      "description": "Next-screen control that advances the app-frame mockup to its next screen.",
+      "scope": "App case studies only.",
+      "implementedBy": "JsProjectNext<Project>.jsx",
+      "presentOn": [
+        "billy",
+        "fnac-darty",
+        "series-mania",
+        "vianney"
+      ]
+    },
+    "case.credits": {
+      "category": "CASE",
+      "description": "'Credits' small title followed by the credits list (roles → people / agencies).",
+      "scope": "Every work page.",
+      "implementedBy": "ProjectSmallTitle.jsx + ProjectCredit*.jsx / inside ProjectContent*.jsx"
+    },
+    "status.not-found": {
+      "category": "STATUS",
+      "description": "Not-found message using the 'let's talk' band layout: giant 'not found' title, a one-line explanation and a 'Back home' link. An inline script swaps in the French copy for /fr/ paths.",
+      "scope": "The not-found page only (served for any unknown URL).",
+      "implementedBy": "TalkCta404.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home (portfolio index)",
+      "routeCount": 2,
+      "routes": [
+        "/",
+        "/fr/"
+      ],
+      "chrome": "full + intro",
+      "sections": [
+        "shell.page-transition-layer",
+        "runtime.intro-preloader",
+        "shell.menu-toggle",
+        "shell.menu-overlay",
+        "hero.home-intro",
+        "works.selected-heading",
+        "works.filter-island",
+        "works.index-list",
+        "cta.lets-talk",
+        "proof.awards",
+        "about.what-i-do",
+        "proof.partners",
+        "cta.contact-footer"
+      ]
+    },
+    {
+      "id": "template.work-case-study",
+      "name": "Work: editorial case study",
+      "routeCount": 28,
+      "routes": [
+        "/works/arte/",
+        "/works/athletic-brewing-company/",
+        "/works/brico-depot/",
+        "/works/graille-sur-le-rail/",
+        "/works/hoppy-road/",
+        "/works/instax/",
+        "/works/la-canute/",
+        "/works/le-monde-loreal/",
+        "/works/mc-cain/",
+        "/works/mijote/",
+        "/works/msa/",
+        "/works/nicolas-feuillatte/",
+        "/works/youtube-ads/",
+        "/works/youtube/",
+        "/fr/works/arte/",
+        "/fr/works/athletic-brewing-company/",
+        "/fr/works/brico-depot/",
+        "/fr/works/graille-sur-le-rail/",
+        "/fr/works/hoppy-road/",
+        "/fr/works/instax/",
+        "/fr/works/la-canute/",
+        "/fr/works/le-monde-loreal/",
+        "/fr/works/mc-cain/",
+        "/fr/works/mijote/",
+        "/fr/works/msa/",
+        "/fr/works/nicolas-feuillatte/",
+        "/fr/works/youtube-ads/",
+        "/fr/works/youtube/"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.page-transition-layer",
+        "shell.menu-toggle",
+        "shell.menu-overlay",
+        "hero.project-head",
+        "hero.project-cover",
+        "case.mission",
+        "case.carousel",
+        "case.stills",
+        "case.gallery-3",
+        "case.block-title",
+        "case.image-large",
+        "case.quote-image",
+        "case.reels",
+        "case.palette",
+        "case.triangle-composition",
+        "case.two-image-bleed",
+        "case.external-link",
+        "case.credits",
+        "works.more-works",
+        "cta.lets-talk"
+      ],
+      "bodyFlow": "The case.* blocks between hero.project-cover and case.credits are a per-project flow: each project uses its own subset, in its own order, and some blocks repeat (see each section's presentOn). The list above is a canonical ordering, not a fixed sequence.",
+      "projects": [
+        "arte",
+        "athletic-brewing-company",
+        "brico-depot",
+        "graille-sur-le-rail",
+        "hoppy-road",
+        "instax",
+        "la-canute",
+        "le-monde-loreal",
+        "mc-cain",
+        "mijote",
+        "msa",
+        "nicolas-feuillatte",
+        "youtube-ads",
+        "youtube"
+      ]
+    },
+    {
+      "id": "template.work-app-case-study",
+      "name": "Work: app / product case study",
+      "routeCount": 8,
+      "routes": [
+        "/works/billy/",
+        "/works/fnac-darty/",
+        "/works/series-mania/",
+        "/works/vianney/",
+        "/fr/works/billy/",
+        "/fr/works/fnac-darty/",
+        "/fr/works/series-mania/",
+        "/fr/works/vianney/"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.page-transition-layer",
+        "shell.menu-toggle",
+        "shell.menu-overlay",
+        "hero.project-head",
+        "hero.project-cover",
+        "case.app-frame",
+        "case.image-large",
+        "case.mission",
+        "case.app-next",
+        "case.quote-image",
+        "case.two-image-bleed",
+        "case.external-link",
+        "case.credits",
+        "works.more-works",
+        "cta.lets-talk"
+      ],
+      "bodyFlow": "Opens with the app-frame mockup and its next-screen control; then a per-project subset of the shared case.* blocks. fnac-darty has only the frame, the next control and credits.",
+      "projects": [
+        "billy",
+        "fnac-darty",
+        "series-mania",
+        "vianney"
+      ]
+    },
+    {
+      "id": "template.not-found",
+      "name": "Not found",
+      "routeCount": 1,
+      "routes": [
+        "/404/"
+      ],
+      "chrome": "transition-only",
+      "sections": [
+        "shell.page-transition-layer",
+        "status.not-found"
+      ]
+    }
+  ]
+}
