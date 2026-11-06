@@ -93,6 +93,11 @@ CASES = [
     ("bound policy version drift", jedit("registry.manifest.json", lambda d: d["designPolicy"].update(policyVersion="0.2.0")), "DESIGN_POLICY", False),
     ("policy file missing", lambda r: (r / "policy/design-policy.json").unlink(), "DESIGN_POLICY", False),
     ("approval overstated as ratified", jedit("policy/design-policy.json", lambda d: d["approval"].update(policyDecision="ratified", architectureDecisionRecorded=True)), "DESIGN_POLICY", False),
+    ("designReview record missing", jedit("registry.manifest.json", lambda d: d.pop("designReview")), "REVIEW", False),
+    ("designReview.by is an agent", jedit("registry.manifest.json", lambda d: d["designReview"].update(by="Claude (AI agent)")), "REVIEW", False),
+    ("status reverted to unreviewed without a record", jedit("registry.manifest.json", lambda d: (d.pop("designReview"), d.update(status="design-review-" + "pending", designReviewStatus="design-review-" + "pending"))), "REVIEW", False),
+    ("productionApproved flipped to true", jedit("registry.manifest.json", lambda d: d.update(productionApproved=True)), "REVIEW", False),
+    ("designReviewStatus differs from status", jedit("registry.manifest.json", lambda d: d.update(designReviewStatus="design-review-" + "pending")), "REVIEW", False),
     ("policy_hash script unregistered", jedit("registry.manifest.json", lambda d: d["entryPoints"].pop("policyHash")), "MANIFEST", False),
     ("absolute machine path", tedit("README.md", "# ", "# " + "/" + "Users/someone/project ", 1), "HYGIENE", False),
 ]

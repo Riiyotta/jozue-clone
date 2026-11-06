@@ -2,7 +2,7 @@
 
 A machine-validated PageSpec system extracted from the jozue.fr clone in the parent folder: tokens, primitives, components, semantic section contracts, three page templates, a compatibility graph, a Draft-07 PageSpec schema, a semantic validator, an adversarial suite, drift proofs and measured evidence.
 
-**Status: design-review-pending, `productionApproved: false`.** The source is a real, live freelance portfolio of a named person. Generated pages may borrow the system (layout rhythm, type scale, motion, colour roles) but never the person's identity, contact details, clients, partners, awards, bio or imagery. Read `docs/sensitivity-and-licensing.md` before using it, and do not publish this repository.
+**Status: design-reviewed (reviewed by the repository owner, Riya Ghosh, on 2026-11-06), not production-approved (`productionApproved: false`).** The source is a real, live freelance portfolio of a named person. Generated pages may borrow the system (layout rhythm, type scale, motion, colour roles) but never the person's identity, contact details, clients, partners, awards, bio or imagery. Read `docs/sensitivity-and-licensing.md` before using it, and do not publish this repository.
 
 ## Counts (recomputed from disk)
 
@@ -50,7 +50,7 @@ This repo is a **portfolio** (`category: "portfolio"`, domain art direction and 
 
 `designPolicy.contentHash` covers the files that enforce the policy (`tokens/llm/token-policy.json`, `compatibility/graph.json`, `schema/pagespec.schema.json`, `schema/semantic_validate.py`). After editing any of them run `python3 extraction/policy_hash.py --write`; `verify_all.py` (check `DESIGN_POLICY`) recomputes it and fails on drift.
 
-Status, stated honestly: the policy is **defined, pending architecture review**. The category label and the policy classification (surfaces, audiences) were derived by the extraction agent from the clone; no owner decision is recorded (`architectureDecisionRecorded: false`). Legal and asset-licensing review are separate and still open.
+Status, stated honestly: the policy is **defined, pending architecture review**. The category label and the policy classification (surfaces, audiences) were derived by the extraction agent from the clone. The repository was reviewed by the owner on 2026-11-06, but no architecture decision on the policy is recorded (`architectureDecisionRecorded: false`). Legal and asset-licensing review are separate and still open.
 
 ## Modes
 

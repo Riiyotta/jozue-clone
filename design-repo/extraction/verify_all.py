@@ -11,7 +11,9 @@ Checks (each named in the output):
   DESIGN_POLICY   category == portfolio; designPolicy bound to n0-design-constraints-common 0.1.0 (Common IR 0.5,
                   hard-and-soft); contentHash recomputed over the enforcing files (extraction/policy_hash.py);
                   policy/design-policy.json exists;
-                  approval stays pending
+                  policy approval stays defined-pending-architecture-review (owner made no architecture decision)
+  REVIEW          status == designReviewStatus == design-reviewed; designReview {by (named human, not an agent), date};
+                  productionApproved is false
   README_COUNTS   README count block equals the recomputed counts (never hand-typed)
   ALLOWLIST       parity both ways: allowlist ids <-> contract files (sections/primitives/components)
   CONTRACTS       every section contract validates against schema/section-contract.schema.json
@@ -131,7 +133,7 @@ LOCAL_EXTENSION = {"ref": "policy/design-policy.json", "policyId": "portfolio-si
 
 
 def check_design_policy(man):
-    """Portfolio category + common-policy binding. Approval is pending: the check also fails if the files claim a
+    """Portfolio category + common-policy binding. Policy approval is still awaiting an architecture decision: the check also fails if the files claim a
     ratified decision, so the status cannot be overstated."""
     ph = load_module("policy_hash", "extraction/policy_hash.py")
     dp = man.get("designPolicy") or {}
@@ -179,6 +181,33 @@ def check_design_policy(man):
     PASSES.append("DESIGN_POLICY")
 
 
+AGENT_RE = re.compile(r"\b(claude|ai|agent|bot|assistant|gpt|llm|automated|script)\b", re.I)
+
+
+def check_review(man):
+    """Owner review record (engine reviewed state): named human, dated; never production-approved."""
+    errs = []
+    for k in ("status", "designReviewStatus"):
+        if man.get(k) != "design-reviewed":
+            errs.append(f"manifest {k} is {man.get(k)!r}, expected 'design-reviewed'")
+    dr = man.get("designReview")
+    if not isinstance(dr, dict):
+        errs.append("manifest designReview record missing")
+    else:
+        by = str(dr.get("by", "")).strip()
+        if len(by) < 3 or AGENT_RE.search(by):
+            errs.append(f"designReview.by {by!r} must be a named human, not an agent")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(dr.get("date", ""))):
+            errs.append("designReview.date must be YYYY-MM-DD")
+        if not str(dr.get("note", "")).strip():
+            errs.append("designReview.note missing")
+    if man.get("productionApproved") is not False:
+        errs.append("productionApproved must stay false")
+    for e in errs:
+        fail("REVIEW", e)
+    PASSES.append("REVIEW")
+
+
 def main(write_counts=False):
     # JSON
     docs = {}
@@ -211,6 +240,7 @@ def main(write_counts=False):
         fail("MANIFEST", f"allowlistVersion {man.get('allowlistVersion')} != allowlist {al.get('version')}")
     PASSES.append("MANIFEST")
     check_design_policy(man)
+    check_review(man)
     # README counts
     rd = (ROOT / "README.md").read_text()
     if readme_block(counts) not in rd:

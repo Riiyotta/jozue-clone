@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 (2026-11-06): reviewed by the repository owner
+
+- `registry.manifest.json`: `status` and new `designReviewStatus` are `design-reviewed`; new `designReview` record (`by`: Riya Ghosh (repository owner), `date`: 2026-11-06, `note`). This is the engine's own reviewed state; the earlier review label is removed on the owner's instruction (chat, 2026-11-06). `productionApproved` stays `false` (not production-approved). `repositoryVersion` 1.1.0 to 1.1.1.
+- The design-policy approval block is unchanged: `policyDecision` stays `defined-pending-architecture-review` and `architectureDecisionRecorded` stays `false`; the owner did not make that architecture decision.
+- The PageSpec schema, validators and examples carry no review-status field, so none changed. Technical limits are unchanged (string-based detection, paraphrase not caught).
+- `verify_all.py`: new `REVIEW` check (status/designReviewStatus `design-reviewed`, `designReview.by` a named human and not an agent, ISO date, `productionApproved` false). `prove_drift.py`: 5 new cases (designReview missing, `by` an agent, status reverted without a record, productionApproved flipped to true, status mismatch). Counts recomputed.
+- No IR file or IR schema was created or changed.
+
 ## 1.1.0 (2026-11-04): portfolio category and common-policy binding (Situation B)
 
 - `registry.manifest.json`: `category: "portfolio"` (and `productDomain: "art-direction-and-photography"`); new `designPolicy` block bound to `n0-design-constraints-common` 0.1.0 (Common IR 0.5, hard-and-soft, domain portfolio) with a `contentHash` over `tokens/llm/token-policy.json`, `compatibility/graph.json`, `schema/pagespec.schema.json` and `schema/semantic_validate.py`. `repositoryVersion` 1.0.0 to 1.1.0.
@@ -8,7 +16,7 @@
 - `verify_all.py`: new `DESIGN_POLICY` check (category, binding ids/versions, recomputed hash, policy file and enforcedBy files present, approval not overstated).
 - `prove_drift.py`: 9 new cases (hash drift after editing an enforcing file, tampered hash, category changed, category removed, binding removed, version drift, policy file missing, approval overstated as ratified, policy_hash unregistered); new `--scratch <empty dir>` option.
 - Counts recomputed (unchanged: no counted item changed).
-- Honest status: approval is **defined-pending-architecture-review**; the category and classification are agent-derived, not owner-confirmed. No IR file or IR schema was created or changed.
+- Status at the time (history, superseded for review status by 1.1.1): policy approval **defined-pending-architecture-review**; the category and classification were agent-derived, not owner-confirmed. No IR file or IR schema was created or changed.
 
 ## 1.0.0 (2026-11-04): initial build (Situation A)
 
